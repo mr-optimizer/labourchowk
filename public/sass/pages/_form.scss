@@ -87,10 +87,7 @@
     .form-inner {
       display: flex;
       width: 200%;
-      p {
-        margin: 10px 0px;
-        text-align: center;
-      }
+      
       form {
         width: 50%;
         transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -121,7 +118,7 @@
 .form-inner form .field {
   height: 50px;
   width: 97%;
-  margin-top: 3rem;
+  margin-top: 2rem;
 
   input,
   select {
@@ -154,6 +151,15 @@
   input[type='file']{
     background-color: white;
   }
+}
+.WarningMessage{
+  text-align: left;
+  font-size: 1.5rem;
+  color: red;
+  padding-left: 5px;
+  display: none;
+  // padding-top: 2px;
+
 }
 #UploadImage {
   font-size: 17px;

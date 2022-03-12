@@ -17,12 +17,23 @@
     
     .page-header {
         position: relative;
-        background-image: linear-gradient( 180deg, rgba(rgb(26, 25, 25), 1) 0%, rgba(rgb(34, 33, 33), 1) 50%, transparent 38%, );
+        background-image: linear-gradient(
+            145deg,
+    transparent 38%,
+    rgba(rgb(26, 25, 25), 1) 0%,
+    rgba(rgb(34, 33, 33), 1) 50%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
     }
     
     .profile-container {
+        position: absolute;
+        top: 8vh;
+        left: 30vw;
         width: 40%;
-        // margin: 4rem auto 0rem auto;
+        margin: 4rem auto ;
         margin: auto;
         background-color: #fff;
         padding: 3rem 3rem 4rem 3rem;
@@ -61,6 +72,7 @@
         border-radius: 50%;
     }
     
+    
     .profile_more-info {
         display: flex;
     }
@@ -73,6 +85,9 @@
     .col_right {
         width: 50%;
         padding-left: 14rem;
+    }
+    .tel{
+        text-decoration: none;
     }
     
     // .more-info{
@@ -103,6 +118,7 @@
     //         }
     //     }
     // }
+
     .review_heading {
         position: relative;
         padding: 1rem;
@@ -113,21 +129,30 @@
     
     .review_section {
         position: absolute;
-        top: 20rem;
-        left: 110rem;
+        top: 30vh;
+        left: 70vw;
+    }
+
+    .wraper_name_star{
+        display: flex;
+        gap:2rem;
+        // justify-content: space-between;
+    }
+
+    .star_c_review{
+        color: #e9b015;
+        font-size: .8rem;
     }
     
     #scroll-container {
         border-radius: 5px;
         padding: 0 2rem;
         overflow: hidden;
-        // position: absolute;
         width: 40rem;
         left: 70%;
         height: 35rem;
         background-color: rgb(245, 241, 236);
         z-index: 11;
-        // margin-top: -32rem;
         border-radius: .4rem;
         box-shadow: 0 2px 20px rgba(99, 98, 98, 0.33);
     }

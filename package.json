@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "NODE_ENV=DEVELOPMENT& nodemon server",
-    "prod": "NODE_ENV=PRODUCTION& nodemon backend/server",
+    "dev": "export NODE_ENV=DEVELOPMENT&& nodemon server",
+    "prod": "export NODE_ENV=PRODUCTION&& nodemon backend/server",
     "sass": "node-sass public/sass/main.scss public/css/style.css -w",
     "compile:scss": "node-sass public/sass/main.scss public/css/style.css",
     "add-prefix": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.css -o public/css/styleWithPrifix.css",

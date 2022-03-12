@@ -19,6 +19,19 @@ app.use(bodyparser.urlencoded({ extended: true }))
 app.use(cookieParser());
 app.use(fileUpload());
 
+
+// importing all controlers
+const { registerUser, loginUser } = require("./backend/controlers/user");
+const { registerWorker, loginWorker } = require("./backend/controlers/worker");
+
+
+// defining routes
+app.post('/registerUser', registerUser);
+app.post('/loginUser', loginUser);
+
+app.post('/registerWorker', registerWorker);
+app.post('/loginWorker', loginWorker);
+
 // middleware to handle errors
 app.use(errorMiddleware);
 

@@ -69,18 +69,24 @@ const workerSchema = new mongoose.Schema({
   avatar: {
     public_id: {
       type: String,
-      required: [true, "Please upload a profile picture"],
+      // required: [true, "Please upload a profile picture"],
     },
     url: {
       type: String,
-      required: [true, "Please upload a profile picture"],
+      // required: [true, "Please upload a profile picture"],
     },
   },
   resetPasswordToken: String,
   resetPasswordExpires: Date,
 });
 
-
+// Encrypting password before saving
+workerSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) {
+    next();
+  }
+  this.password = await bcrypt.hash(this.password, 10);
+});
 // compare user password
 workerSchema.methods.comparePassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
@@ -96,16 +102,17 @@ workerSchema.methods.getJwtToken = function () {
 // Generating password reset token
 workerSchema.methods.getResetPasswordToken = function () {
   // generate new password reset token from crypto
-  const resetToken = crypto.randomBytes(20).toString('hex');
+  const resetToken = crypto.randomBytes(20).toString("hex");
 
   // Hash the resetToken and assign to worker's resetPasswordToken
-  this.resetPasswordToken = crypto.createHash('sha256').update(resetToken).digest('hex');
+  this.resetPasswordToken = crypto
+    .createHash("sha256")
+    .update(resetToken)
+    .digest("hex");
 
   // setting token expire time to 30min
-  this.resetPasswordExpires = Date.now() + 30*60*1000;
+  this.resetPasswordExpires = Date.now() + 30 * 60 * 1000;
   return resetToken;
+};
 
-}
-
-module.exports = mongoose.model("worker", workerSchema);
-
+module.exports = mongoose.model("Worker", workerSchema);

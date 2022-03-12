@@ -8,21 +8,22 @@
   <link rel="stylesheet" href="/public/css/style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="/public/javascript/form.js" defer></script>
+  <script src="/public/javascript/validation.js" defer></script>
 </head>
 
 <body>
   <section class="home_container" style="min-height: 15vh;">
     <div class="top_bar">
         <div class="company_branding">
-            <img src="./public/img/logo.png" alt="" class="company_logo">
+            <img src="/public/img/logo.png" alt="" class="company_logo">
             <span class="company_name">Labour Chowk</span>
         </div>
         <div class="top_bar_left">
-            <img class="top_bar_left_logo" src="./public/img/home/phone.png" alt="">
+            <img class="top_bar_left_logo" src="/public/img/home/phone.png" alt="">
             <span class="top_bar_left_text"> +91 9142357822</span>
         </div>
         <div class="top_bar_left">
-            <img class="top_bar_left_logo" src="./public/img/home/address.png" alt="">
+            <img class="top_bar_left_logo" src="/public/img/home/address.png" alt="">
             <span class="top_bar_left_text"> &nbsp;Punjab, India</span>
         </div>
     </div>
@@ -62,32 +63,56 @@
         <div class="form-inner">
           <form action="/registerworker" method="POST" class="login login1">
             <div class="field">
-              <input type="text" name="WorkerFirstName" label="First_Name" placeholder="First Name" required />
+              <input type="text" name="WorkerFirstName" label="First_Name" placeholder="First Name" id="WorkerFirstName" required />
             </div>
+            <p class="WarningMessage">
+              The field cannot be blank
+            </p>
+            
+            
 
             <div class="field">
-              <input name="WorkerLastName" type="text" label="Last Name" placeholder="Last Name" required />
+              <input name="WorkerLastName" type="text" label="Last Name" placeholder="Last Name" id="WorkerLastName" required />
             </div>
+            <p class="WarningMessage">
+              The field cannot be blank
+            </p>
 
             <div class="field">
-              <input name="WorkerDOB" type="date" label="DOB" placeholder="Date of birth" />
+              <input name="WorkerDOB" type="date" label="DOB" placeholder="Date of birth" id="WorkerDOB"/>
             </div>
+            <p class="WarningMessage">
+              The age should be above 18
+            </p>
 
             <div class="field">
-              <input type="text" name="WorkerAddress1" label="Address1" placeholder="Address1" />
+              <input type="text" name="WorkerAddress1" label="Address1" id="WorkerAddress1" placeholder="Address1" />
             </div>
+            <p class="WarningMessage">
+              The field cannot be blank
+            </p>
             <div class="field">
-              <input type="text" name="WorkerAddress2" label="Address2" placeholder="Address2" />
+              <input type="text" name="WorkerAddress2" label="Address2" id="WorkerAddress2"  placeholder="Address2" />
             </div>
+            <p class="WarningMessage">
+              The field cannot be blank
+            </p>
             <div class="field">
-              <input type="text" name="WorkerPincode" label="Pincode" placeholder="Pincode" />
+              <input type="number" name="WorkerPincode" label="Pincode" id="WorkerPincode" placeholder="Pincode" />
             </div>
+            <p class="WarningMessage">
+              The field cannot be blank
+            </p>
+
             <div class="field">
-              <input type="text" name="WokerCity" label="City" placeholder="City" />
+              <input type="text" name="WokerCity" label="City" id="WokerCity" placeholder="City" />
             </div>
+            <p class="WarningMessage">
+              The field cannot be blank
+            </p>
             <div class="field">
-              <select name="WorkerState" id="state" class="form-control">
-                <option value="state">Select Yout State....</option>
+              <select name="WorkerState" id="WorkerState" class="form-control" >
+                <option value="">Select Yout State....</option>
                 <option class="field" value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -126,10 +151,13 @@
                 <option value="West Bengal">West Bengal</option>
               </select>
             </div>
+            <p class="WarningMessage">
+              Select your state
+            </p>
 
             <div class="field">
-              <select name="WokerType">
-                <option value="work">Select Your Work Type...</option>
+              <select name="WokerType" id="WorkerType">
+                <option value="">Select Your Work Type...</option>
                 <option value="">Manson</option>
                 <option value="Labour">Labour</option>
                 <option value="Painter">Painter</option>
@@ -139,29 +167,44 @@
 
               </select>
             </div>
+            <p class="WarningMessage">
+              This caanot be blank
+            </p>
 
             <div class="field">
               <input name="WorkersAadhar" type="text" label="Aadhar" placeholder="Aadhar number" />
             </div>
+            <p class="WarningMessage">
+              This is not a valid aadhar number
+            </p>
 
             <div class="field">
               <input name="WorkerContactNo" type="tel" placeholder="Contact Number" required />
             </div>
+            <p class="WarningMessage">
+              This is not a valid Mobile number
+            </p>
           
             
             <div class="field" id="UploadImage">
               <label for="image" >Upload your pic</label>
               
-              <input type="file" name="image" placeholder="upload your image" accept="image/*" >
+              <input type="file" name="image" placeholder="upload your image" accept="image/*" required />
             </div>
 
             <div class="field">
               <input name="WorkerPassword" type="password" label="Password" placeholder="Password" required />
             </div>
+            <p class="WarningMessage">
+              Should contain 1 uppercase,1 lowercase,1number,1 symbol
+            </p>
 
             <div class="field">
               <input type="password" placeholder="Confirm Password" required />
             </div>
+            <p class="WarningMessage">
+              This password is wrong
+            </p>
 
             <div class="Ack">
               <input type="checkbox" name="Ack" class="Ack" required />

@@ -713,9 +713,6 @@ body {
     .wrapper .form-container .form-inner {
       display: flex;
       width: 200%; }
-      .wrapper .form-container .form-inner p {
-        margin: 10px 0px;
-        text-align: center; }
       .wrapper .form-container .form-inner form {
         width: 50%;
         transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
@@ -741,7 +738,7 @@ body {
 .form-inner form .field {
   height: 50px;
   width: 97%;
-  margin-top: 3rem; }
+  margin-top: 2rem; }
   .form-inner form .field input,
   .form-inner form .field select {
     height: 100%;
@@ -768,6 +765,13 @@ body {
     resize: none; }
   .form-inner form .field input[type='file'] {
     background-color: white; }
+
+.WarningMessage {
+  text-align: left;
+  font-size: 1.5rem;
+  color: red;
+  padding-left: 5px;
+  display: none; }
 
 #UploadImage {
   font-size: 17px;
@@ -847,10 +851,17 @@ input[type="radio"] {
 
 .page-header {
   position: relative;
-  background-image: linear-gradient(180deg, #1a1919 0%, #222121 50%, transparent 38%); }
+  background-image: linear-gradient(145deg, transparent 38%, #1a1919 0%, #222121 50%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
 
 .profile-container {
+  position: absolute;
+  top: 8vh;
+  left: 30vw;
   width: 40%;
+  margin: 4rem auto;
   margin: auto;
   background-color: #fff;
   padding: 3rem 3rem 4rem 3rem;
@@ -893,6 +904,9 @@ input[type="radio"] {
   width: 50%;
   padding-left: 14rem; }
 
+.tel {
+  text-decoration: none; }
+
 .review_heading {
   position: relative;
   padding: 1rem;
@@ -902,8 +916,16 @@ input[type="radio"] {
 
 .review_section {
   position: absolute;
-  top: 20rem;
-  left: 110rem; }
+  top: 30vh;
+  left: 70vw; }
+
+.wraper_name_star {
+  display: flex;
+  gap: 2rem; }
+
+.star_c_review {
+  color: #e9b015;
+  font-size: .8rem; }
 
 #scroll-container {
   border-radius: 5px;
@@ -927,3 +949,51 @@ input[type="radio"] {
     transform: translateY(100%); }
   to {
     transform: translateY(-500%); } }
+
+.profile_section {
+  display: flex;
+  height: 100vh;
+  background-image: linear-gradient(145deg, transparent 38%, #1a1919 0%, #222121 50%);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.selecting_container {
+  width: 20vw;
+  background-color: rgba(53, 58, 56, 0.985);
+  padding: 2rem; }
+
+.filters {
+  padding: 2rem; }
+
+.work_type_container {
+  margin: 2rem; }
+
+.rating_container {
+  margin: 2rem; }
+
+.price_container {
+  margin: 2rem; }
+
+.search_container {
+  margin: 2rem; }
+
+.r_btn {
+  display: flex;
+  gap: 1.5rem;
+  margin: .2rem; }
+  .r_btn input[type="radio"] {
+    display: inline-block; }
+
+.c_box {
+  display: flex;
+  gap: 1.5rem;
+  margin: .4rem; }
+
+.star_c_r {
+  color: orange; }
+
+.s_box {
+  display: flex;
+  gap: 1.5rem; }
+  .s_box_btn {
+    padding: .2rem 1.2rem; }

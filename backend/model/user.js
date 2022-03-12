@@ -63,17 +63,24 @@ const userSchema = new mongoose.Schema({
   avatar: {
     public_id: {
       type: String,
-      required: [true, "Please upload a profile picture"]
+      // required: [true, "Please upload a profile picture"]
     },
     url: {
       type: String,
-      required: [true, "Please upload a profile picture"]
+      // required: [true, "Please upload a profile picture"]
     },
   },
   resetPasswordToken: String,
   resetPasswordExpires: Date,
 });
 
+// Encrypting password before saving
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) {
+    next();
+  }
+  this.password = await bcrypt.hash(this.password, 10);
+});
 
 
 // compare user password

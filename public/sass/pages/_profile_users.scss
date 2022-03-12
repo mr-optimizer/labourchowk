@@ -1,0 +1,66 @@
+            .profile_section {
+                display: flex;
+                // gap: 5rem;   
+                height: 100vh;
+                background-image: linear-gradient( 145deg, transparent 38%, rgba(rgb(26, 25, 25), 1) 0%, rgba(rgb(34, 33, 33), 1) 50%);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            
+            .selecting_container {
+                width: 20vw;
+                background-color: rgba(53, 58, 56, 0.985);
+                padding: 2rem;
+            }
+            
+            .filters {
+                padding: 2rem;
+            }
+            
+            .work_type_container {
+                margin: 2rem;
+            }
+            
+            .rating_container {
+                margin: 2rem;
+            }
+            
+            .price_container {
+                margin: 2rem;
+            }
+            
+            .search_container {
+                margin: 2rem;
+            }
+            
+            .r_btn {
+                display: flex;
+                gap: 1.5rem;
+                margin: .2rem;
+                input[type="radio"] {
+                    display: inline-block;
+                }
+            }
+            
+            .c_box {
+                display: flex;
+                gap: 1.5rem;
+                margin: .4rem;
+            }
+            
+            .star_c_r {
+                color: orange
+            }
+            
+            .s_box {
+                display: flex;
+                gap: 1.5rem;
+                &_btn {
+                    padding: .2rem 1.2rem;
+                    ;
+                }
+            }
+            
+            .profile_card {
+                // width: 100vw;
+            }
