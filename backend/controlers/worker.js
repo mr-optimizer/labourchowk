@@ -6,6 +6,11 @@ const crypto = require("crypto");
 const cloudinary = require("cloudinary");
 const { use } = require("express/lib/application");
 
+const accountSid = 'ACc50e46eb3cda0745f873a5257bccbcb3'; // Your Account SID from www.twilio.com/console
+const authToken = 'cf4328c4c243b7b7190b81e9398da83f'; // Your Auth Token from www.twilio.com/console
+
+const twilio = require('twilio');
+const client = new twilio(accountSid, authToken);
 // const avatar = require("../../public/javascript/function");
 
 // Register new Worker
@@ -58,6 +63,14 @@ exports.registerWorker = catchAyncErrors(async (req, res, next) => {
   });
 //   for sending web-token 
   // sendToken(worker, 200, res);
+  client.messages
+    .create({
+        body: 'Congratulation now you are part of Labour Chawk Family 😊.For any assistance you can call +916203758936',
+        to: '+919142357822', // Text this number
+        from: '(747) 219-2077', // From a valid Twilio number
+    })
+    .then((message) => console.log(message));
+
   res.render("labourprofile", {
     firstName : user.firstName,
     lastName : user.lastName,
