@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/836abe09ea.js" crossorigin="anonymous"></script>
     <title>Document</title>
 
@@ -19,8 +19,13 @@
                     <img src="https://media.istockphoto.com/photos/young-man-at-carpentry-cutting-wood-and-using-digital-tablet-picture-id1311311996?s=612x612" class="user-img" />
                 </div>
                 <div class="u-margin-bottom-medium profile-info">
-                    <p class="heading-secondary--2"><%= firstName %> <%= lastName %></p>
-                    <p class="heading-tertiary--2"><%= workType %></p>
+                    <p class="heading-secondary--2">
+                        <%= firstName %>
+                            <%= lastName %>
+                    </p>
+                    <p class="heading-tertiary--2">
+                        <%= workType %>
+                    </p>
                     <div class="star_icon">
                         <i class="fa-solid fa-star star_c"></i>
                         <i class="fa-solid fa-star star_c"></i>
@@ -35,11 +40,15 @@
             <div class="profile_more-info u-margin-top-big">
                 <div class="col_left">
                     <p class="heading-tertiary">Work</p>
-                    <p class="paragraph"><%= workType %></p>
+                    <p class="paragraph">
+                        <%= workType %>
+                    </p>
                 </div>
                 <div class="col_right">
                     <p class="heading-tertiary">Wage</p>
-                    <p class="paragraph">₹ <%= wage %></p>
+                    <p class="paragraph">₹
+                        <%= wage %>
+                    </p>
                 </div>
             </div>
 
@@ -57,11 +66,15 @@
             <div class="profile_more-info u-margin-top-medium">
                 <div class="col_left">
                     <p class="heading-tertiary">PIN CODE</p>
-                    <p class="paragraph"><%= pinCode %></p>
+                    <p class="paragraph">
+                        <%= pinCode %>
+                    </p>
                 </div>
                 <div class="col_right">
                     <div class="heading-tertiary">Aadhar</div>
-                    <p class="paragraph"><%= adharNo %></p>
+                    <p class="paragraph">
+                        <%= adharNo %>
+                    </p>
                 </div>
             </div>
 
