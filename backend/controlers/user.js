@@ -53,7 +53,7 @@ exports.registerUser = catchAyncErrors(async (req, res, next) => {
   // sendToken(user, 200, res);
 
   let queryUrl = {
-    keyword: `${user.pinCode}`,
+    pinCode : pinCode * 1,
   };
   const apiFeatures = new ApiFeatures(Worker.find(), queryUrl)
     .search() //all the products in Product collection is now stored in apifeaturs
@@ -105,9 +105,9 @@ exports.loginUser = catchAyncErrors(async (req, res, next) => {
   currUser = user;
 
   let queryUrl = {
-    keyword: `${user.pinCode}`,
+    pinCode : user.pinCode * 1,
   };
-  console.log(req);
+
   const apiFeatures = new ApiFeatures(Worker.find(), queryUrl)
     .search() //all the products in Product collection is now stored in apifeaturs
     .filter() //all the product matching with keyword is store in this
