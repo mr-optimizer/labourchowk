@@ -1,0 +1,133 @@
+///////////////////////////////////////////////
+
+// --------------Footer--------------------------//
+.footer {
+  padding: 4rem 7rem 1rem 6rem;
+  // background-color: var(--color-gray-dark);
+  background-color: black;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  .footer__container {
+    display: flex;
+    @media screen and (max-width: $bp-small) {
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+    gap: 3rem;
+    justify-content: space-between;
+    .header__brand__name__footer {
+      font-size: 4rem;
+      font-weight: 600;
+      line-height: 0.8;
+      color: var(--color-white);
+      &--title {
+        color: var(--color-primary-dark);
+      }
+    }
+    &__about {
+      width: 50%;
+      margin-left: 4rem;
+      display: flex;
+      flex-direction: column;
+      @media screen and (max-width: $bp-small) {
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 1rem;
+      }
+      gap: 2rem;
+      &--text {
+        color: var(--color-white);
+        font-size: 1.7rem;
+      }
+    }
+    &__contact {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      @media screen and (max-width: $bp-small) {
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 1rem;
+      }
+      gap: 2rem;
+      color: var(--color-white);
+      font-size: 1.5rem;
+      &__heading {
+        font-size: 2.7rem;
+      }
+      &__link,
+      &__link:active,
+      &__link:visited {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+  .social_media {
+    display: flex;
+    gap: 3rem;
+  }
+  .icon {
+    transition: all 0.2s;
+    height: 3rem;
+    fill: white;
+    &:hover {
+      transform: translateY(-0.15rem);
+      transform: scale(1.2);
+    }
+    &-facebook {
+      &:hover {
+        fill: #0066ff;
+      }
+    }
+    &-whatsapp {
+      &:hover {
+        fill: rgb(2, 175, 17);
+      }
+    }
+    &-insta {
+      &:hover {
+        fill: #f54b67;
+      }
+    }
+    &-mail {
+      &:hover {
+        fill: #cf0a0a;
+      }
+    }
+    &-twitter {
+      &:hover {
+        fill: #1e7fee;
+      }
+    }
+    &-youtube {
+      &:hover {
+        fill: red;
+      }
+    }
+  }
+}
+.hr__line {
+  background-color: #776565;
+  height: 1px;
+  width: 83vw;
+}
+.company_logo{
+  width: 3rem;
+}
+.copyright {
+  // line-height: 1;
+  margin-top: -2rem;
+  font-size: 1.7rem;
+  @media screen and (max-width: $bp-small) {
+    width: 110%;
+  }
+  color: var(--color-white);
+  font-family: "lato";
+  font-style: italic;
+}
+///////////////////////////////////////////////

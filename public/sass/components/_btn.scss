@@ -1,0 +1,46 @@
+.btn-primary{
+    &,
+    &:link,
+    &:visited{
+        cursor: pointer !important;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        @media screen and (max-width:$bp-medium) {
+            padding: .7rem 1rem;
+            font-size: 1rem;
+        }
+        border-radius: 10rem;
+        font-weight: 700;
+        color: #fff;
+        background-image: linear-gradient(to bottom, rgba(rgb(12, 12, 12),0.4 ), rgba(black,1));
+    }
+}
+
+.btn-secondary {
+    &--light{
+        &,
+        &:link,
+        &:visited{
+        cursor: pointer;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 1rem;
+        padding: 0.7rem 1.3rem;
+        color: #2f68ec;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0.1rem 0.12rem   rgba(0,0,0,0.5);
+        transition: all 0.2s;
+    }
+    &:active {
+        color: #000;
+        transform: translateY(.1rem);
+        box-shadow: 0rem 0rem   rgba(0,0,0,0.5);
+        }
+    }
+}

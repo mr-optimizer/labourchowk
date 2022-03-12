@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>SignUp</title>
+  <link rel="stylesheet" href="/public/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="/public/javascript/form.js" defer></script>
+</head>
+
+<body>
+  <section class="home_container" style="min-height: 15vh;">
+    <div class="top_bar">
+        <div class="company_branding">
+            <img src="./public/img/logo.png" alt="" class="company_logo">
+            <span class="company_name">Labour Chowk</span>
+        </div>
+        <div class="top_bar_left">
+            <img class="top_bar_left_logo" src="./public/img/home/phone.png" alt="">
+            <span class="top_bar_left_text"> +91 9142357822</span>
+        </div>
+        <div class="top_bar_left">
+            <img class="top_bar_left_logo" src="./public/img/home/address.png" alt="">
+            <span class="top_bar_left_text"> &nbsp;Punjab, India</span>
+        </div>
+    </div>
+    <nav class="nav_bar">
+        <div class="nav_bar_nav">
+            <div class="nav_bar_item">Home</div>
+            <div class="nav_bar_item">Servises</div>
+            <div class="nav_bar_item">Pages</div>
+            <div class="nav_bar_item">Portfolio</div>
+            <div class="nav_bar_item">Features</div>
+            <div class="nav_bar_item">About</div>
+        </div>
+        <span class="nav_bar_btn">Singup Now</>
+    </nav>
+    
+</section>
+
+  <div id="failure" class="hidden">
+    <p>Oops!! there was some error!! 😶</p>
+  </div>
+
+  <div class="formgroup">
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Signup As</div>
+        <div class="title signup">SignUp As</div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked />
+          <input type="radio" name="slide" id="signup" />
+          <label for="login" class="slide login">Worker</label>
+          <label for="signup" class="slide signup">Customer</label>
+          <div class="slider-tab"></div>
+        </div>
+
+        <div class="form-inner">
+          <form action="/registerworker" method="POST" class="login login1">
+            <div class="field">
+              <input type="text" name="WorkerFirstName" label="First_Name" placeholder="First Name" required />
+            </div>
+
+            <div class="field">
+              <input name="WorkerLastName" type="text" label="Last Name" placeholder="Last Name" required />
+            </div>
+
+            <div class="field">
+              <input name="WorkerDOB" type="date" label="DOB" placeholder="Date of birth" />
+            </div>
+
+            <div class="field">
+              <input type="text" name="WorkerAddress1" label="Address1" placeholder="Address1" />
+            </div>
+            <div class="field">
+              <input type="text" name="WorkerAddress2" label="Address2" placeholder="Address2" />
+            </div>
+            <div class="field">
+              <input type="text" name="WorkerPincode" label="Pincode" placeholder="Pincode" />
+            </div>
+            <div class="field">
+              <input type="text" name="WokerCity" label="City" placeholder="City" />
+            </div>
+            <div class="field">
+              <select name="WorkerState" id="state" class="form-control">
+                <option value="state">Select Yout State....</option>
+                <option class="field" value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                <option value="Daman and Diu">Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <select name="WokerType">
+                <option value="work">Select Your Work Type...</option>
+                <option value="">Manson</option>
+                <option value="Labour">Labour</option>
+                <option value="Painter">Painter</option>
+                <option value="Plumber">Plumber</option>
+                <option value="Tiles Mistri">Tiles Mistri</option>
+                <option value="BlackSmith">BlackSmith</option>
+
+              </select>
+            </div>
+
+            <div class="field">
+              <input name="WorkersAadhar" type="text" label="Aadhar" placeholder="Aadhar number" />
+            </div>
+
+            <div class="field">
+              <input name="WorkerContactNo" type="tel" placeholder="Contact Number" required />
+            </div>
+          
+            
+            <div class="field" id="UploadImage">
+              <label for="image" >Upload your pic</label>
+              
+              <input type="file" name="image" placeholder="upload your image" accept="image/*" >
+            </div>
+
+            <div class="field">
+              <input name="WorkerPassword" type="password" label="Password" placeholder="Password" required />
+            </div>
+
+            <div class="field">
+              <input type="password" placeholder="Confirm Password" required />
+            </div>
+
+            <div class="Ack">
+              <input type="checkbox" name="Ack" class="Ack" required />
+              <label for="Ack">I agree to the<a href="/TANDC" target="blank">
+                  terms and condition</a>
+              </label>
+            </div>
+
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+
+          <form action="/registercustomer" method="POST" class="signup login2">
+            <div class="field">
+              <input type="text" name="CustomerFirstName" label="First_Name" placeholder="First Name" required />
+            </div>
+
+            <div class="field">
+              <input name="CustomerLastName" type="text" label="Last_Name" placeholder="Last Name" required />
+            </div>
+
+            <div class="field">
+              <input type="text" name="CustomerAddress1" label="CustomerAddress1" placeholder="Address1" required />
+            </div>
+            <div class="field">
+              <input type="text" name="CustomerAddress2" label="CustomerAddress2" placeholder="Address2" required />
+            </div>
+            <div class="field">
+              <input type="text" name="CustomerPincode" label="CustomerPincode" placeholder="Pincode" required />
+            </div>
+            <div class="field">
+              <input type="text" name="CustomerCity" label="CustomerCity" placeholder="City" required />
+            </div>
+            <div class="field">
+              <select name="CustomerState" id="CustomerState" class="form-control">
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                <option value="Daman and Diu">Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <input name="CustomerContactNo" label="Company_Contact_Number" type="tel" placeholder="Contact Number"
+                required />
+            </div>
+
+            <div class="field">
+              <input name="CustomerEmail" label="CustomerEmail" type="email" placeholder="Email Id" />
+            </div>
+
+            <div class="field" id="UploadImage">
+              <label for="image" >Upload your pic</label>
+              
+              <input type="file" name="image" placeholder="upload your image" accept="image/*" >
+            </div>
+
+
+            <div class="field">
+              <input name="CustomerPassword" type="password" label="CustomerPassword" placeholder="Password" required />
+            </div>
+
+            <div class="field">
+              <input name="CustomerConfirmPassword" type="password" placeholder="Confirm Password" required />
+
+            </div>
+
+            <div class="Ack">
+              <input type="checkbox" name="Ack" class="Ack" required />
+              <label for="Ack">I agree to the<a href="TANDC.html" target="blank">
+                  terms and condition</a>
+              </label>
+            </div>
+
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" id="" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer" id="footer">
+    <div class="footer__container">
+        <div class="footer__container__about">
+            
+                <div class="company">
+                    <div class="header__brand__name__footer">
+                        Labour
+                        <span class="header__brand__name__footer--title">Chowk</span>
+        </div>
+        
+        </div>
+        
+        <div class="footer__container__about--text">
+            Farm Business is a Non-Profit Organization that provides Farmers exposure and opportunities to sell their products at justified prices. We open them doors to thousands of market verified buyers.
+        </div>
+        <div class="social_media">
+            <a href="https://www.facebook.com/profile.php?id=100079149154544" class="social_media_link">
+                <svg width="36" height="36" viewBox="0 0 36 36" class="icon icon-facebook" xmlns="http://www.w3.org/2000/svg">
+                        <g id="fb">
+                            <g id="Group">
+                                <path id="Vector" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 18.1005C0 27.0495 6.4995 34.491 15 36V22.9995H10.5V18H15V13.9995C15 9.4995 17.8995 7.0005 22.0005 7.0005C23.2995 7.0005 24.7005 7.2 25.9995 7.3995V12H23.7C21.4995 12 21 13.0995 21 14.5005V18H25.8L25.0005 22.9995H21V36C29.5005 34.491 36 27.051 36 18.1005C36 8.145 27.9 0 18 0C8.1 0 0 8.145 0 18.1005Z" />
+                            </g>
+                        </g>
+                    </svg>
+            </a>
+            <a href="http://wa.me/9798447977" class="social_media_link"><svg width="36" height="36"
+                        viewBox="0 0 36 36" fill="black" class="icon icon-whatsapp"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g id="whatsapp">
+                            <path id="Vector"
+                                d="M33.3077 8.32479C27.9225 -0.000275197 16.9278 -2.47529 8.40133 2.69975C0.099206 7.87479 -2.59337 19.1249 2.79179 27.4499L3.24055 28.1249L1.4455 34.875L8.17695 33.075L8.85009 33.525C11.7671 35.1 14.9084 36 18.0497 36C21.4155 36 24.7812 35.1 27.6982 33.3C36.0003 27.8999 38.4685 16.8749 33.3077 8.32479ZM28.5957 25.6499C27.6982 26.9999 26.5762 27.8999 25.0056 28.1249C24.108 28.1249 22.9861 28.5749 18.4985 26.7749C14.684 24.9749 11.5427 22.0499 9.29886 18.6749C7.95257 17.0999 7.27942 15.0748 7.05504 13.0498C7.05504 11.2498 7.72818 9.6748 8.85009 8.54979C9.29886 8.09979 9.74762 7.87479 10.1964 7.87479H11.3183C11.7671 7.87479 12.2158 7.87479 12.4402 8.77479C12.889 9.8998 14.0109 12.5998 14.0109 12.8248C14.2353 13.0498 14.2353 13.4998 14.0109 13.7248C14.2353 14.1748 14.0109 14.6248 13.7865 14.8498C13.5621 15.0748 13.3377 15.5248 13.1133 15.7498C12.6646 15.9748 12.4402 16.4249 12.6646 16.8749C13.5621 18.2249 14.684 19.5749 15.8059 20.6999C17.1522 21.8249 18.4985 22.7249 20.0692 23.3999C20.5179 23.6249 20.9667 23.6249 21.1911 23.1749C21.4155 22.7249 22.5374 21.5999 22.9861 21.1499C23.4349 20.6999 23.6593 20.6999 24.108 20.9249L27.6982 22.7249C28.1469 22.9499 28.5957 23.1749 28.8201 23.3999C29.0444 24.0749 29.0444 24.9749 28.5957 25.6499Z" />
+                        </g>
+                    </svg>
+                </a>
+            <a href="https://www.instagram.com/labourschowk/" class="social_media_link"><svg width="36"
+                        height="36" viewBox="0 0 36 36" class="icon icon-insta" xmlns="http://www.w3.org/2000/svg">
+                        <g id="insta">
+                            <path id="Vector-insta"
+                                d="M17.9952 11.9974C14.69 11.9974 11.9927 14.6948 11.9927 18C11.9927 21.3052 14.69 24.0026 17.9952 24.0026C21.3003 24.0026 23.9976 21.3052 23.9976 18C23.9976 14.6948 21.3003 11.9974 17.9952 11.9974ZM35.998 18C35.998 15.5143 36.0205 13.0512 35.8809 10.57C35.7413 7.68803 35.0839 5.1303 32.9765 3.02288C30.8646 0.910954 28.3114 0.258013 25.4295 0.118418C22.9439 -0.0211759 20.4808 0.0013394 17.9997 0.0013394C15.514 0.0013394 13.0509 -0.0211759 10.5698 0.118418C7.68789 0.258013 5.13021 0.915457 3.02282 3.02288C0.910937 5.13481 0.258008 7.68803 0.118416 10.57C-0.0211755 13.0557 0.00133938 15.5188 0.00133938 18C0.00133938 20.4812 -0.0211755 22.9488 0.118416 25.43C0.258008 28.312 0.91544 30.8697 3.02282 32.9771C5.13471 35.089 7.68789 35.742 10.5698 35.8816C13.0554 36.0212 15.5185 35.9987 17.9997 35.9987C20.4853 35.9987 22.9484 36.0212 25.4295 35.8816C28.3114 35.742 30.8691 35.0845 32.9765 32.9771C35.0884 30.8652 35.7413 28.312 35.8809 25.43C36.025 22.9488 35.998 20.4857 35.998 18V18ZM17.9952 27.2357C12.8843 27.2357 8.75959 23.111 8.75959 18C8.75959 12.889 12.8843 8.76426 17.9952 8.76426C23.106 8.76426 27.2307 12.889 27.2307 18C27.2307 23.111 23.106 27.2357 17.9952 27.2357ZM27.609 10.543C26.4157 10.543 25.4521 9.57931 25.4521 8.386C25.4521 7.1927 26.4157 6.22905 27.609 6.22905C28.8023 6.22905 29.7659 7.1927 29.7659 8.386C29.7663 8.66936 29.7107 8.95 29.6024 9.21186C29.4942 9.47371 29.3353 9.71163 29.1349 9.912C28.9346 10.1124 28.6967 10.2712 28.4348 10.3795C28.173 10.4878 27.8923 10.5433 27.609 10.543V10.543Z" />
+                        </g>
+                    </svg>
+                </a>
+            <a href="mailto:chowklabours@gmail.com" class="social_media_link"><svg width="36" height="36"
+                        viewBox="0 0 18 18" class="icon icon-mail" xmlns="http://www.w3.org/2000/svg">
+                        <g id="mail">
+                            <path id="Vector"
+                                d="M4.09092 17.9998V8.72962L1.93408 6.09945L0 4.63989V16.3639C0 17.2691 0.550195 17.9998 1.2273 17.9998H4.09092V17.9998Z" />
+                            <path id="Vector_2"
+                                d="M13.9092 18H16.7728C17.4519 18 18.0001 17.2665 18.0001 16.364V4.64014L15.8094 6.31188L13.9092 8.72976V18V18Z" />
+                            <path id="Vector_3"
+                                d="M4.09085 8.72975L3.79736 5.10761L4.09085 1.64087L8.99992 6.54861L13.909 1.64087L14.2374 4.92044L13.909 8.72975L8.99992 13.6375L4.09085 8.72975Z" />
+                            <path id="Vector_4"
+                                d="M13.9092 1.641V8.72987L18.0001 4.64015V2.45892C18.0001 0.435899 16.2676 -0.71737 15.0547 0.495882L13.9092 1.641Z" />
+                            <path id="Vector_5"
+                                d="M0 4.63971L1.88149 6.52074L4.09092 8.72943V1.64055L2.94539 0.495437C1.73039 -0.717909 0 0.435454 0 2.45838V4.63961V4.63971Z" />
+                        </g>
+                    </svg>
+                </a>
+            <a href="https://twitter.com/ChowkLabours" class="social_media_link"><svg width="36" height="36"
+                        viewBox="0 0 36 36" class="icon icon-twitter" xmlns="http://www.w3.org/2000/svg">
+                        <g id="twitter">
+                            <path id="Vector"
+                                d="M18 0C8.05982 0 0 8.05982 0 18C0 27.9402 8.05982 36 18 36C27.9402 36 36 27.9402 36 18C36 8.05982 27.9402 0 18 0ZM26.6504 13.5683C26.6625 13.7571 26.6625 13.954 26.6625 14.1469C26.6625 20.0451 22.1705 26.8393 13.9621 26.8393C11.4308 26.8393 9.08437 26.104 7.10759 24.8384C7.4692 24.8786 7.81473 24.8946 8.18438 24.8946C10.2737 24.8946 12.1942 24.1875 13.725 22.9902C11.7643 22.95 10.117 21.6643 9.55446 19.8964C10.2415 19.9969 10.8603 19.9969 11.5674 19.8161C10.5578 19.611 9.65039 19.0627 8.99926 18.2643C8.34813 17.466 7.99347 16.4668 7.99554 15.4366V15.3804C8.58616 15.7138 9.28125 15.9187 10.0085 15.9469C9.39713 15.5394 8.89577 14.9875 8.54884 14.3399C8.20191 13.6923 8.02014 12.969 8.01964 12.2344C8.01964 11.4027 8.23661 10.6433 8.62634 9.98437C9.74693 11.3639 11.1453 12.4921 12.7304 13.2958C14.3156 14.0994 16.0522 14.5605 17.8272 14.6491C17.1964 11.6156 19.4625 9.16071 22.1866 9.16071C23.4723 9.16071 24.6295 9.69911 25.4451 10.567C26.4536 10.3781 27.4179 10.0004 28.2777 9.4942C27.9442 10.5268 27.2451 11.3987 26.317 11.9491C27.217 11.8527 28.0848 11.6036 28.8884 11.254C28.2817 12.146 27.5223 12.9375 26.6504 13.5683V13.5683Z" />
+                        </g>
+                    </svg>
+                </a>
+            
+        </div>
+        </div>
+        <div class="footer__container__contact">
+            <div class="footer__container__contact__heading">
+                Contact Us
+                <svg width="68" height="1" class="u-margin-bottom-very_small" style="display: block" viewBox="0 0 68 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line id="Line 1" y1="0.5" x2="67.0075" y2="0.5" stroke="#FF1515" />
+                </svg>
+                <svg width="101" height="2" style="display: block" viewBox="0 0 101 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="Line 2" d="M0.00146484 0.994873H100.006" stroke="#FF1010" />
+                </svg>
+            </div>
+            <div class="footer__container__contact__map">
+                <a href="" class="footer__container__contact__link">
+                    <svg width="18" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="el:map-marker">
+                            <path id="Vector"
+                                d="M10 0C5.8363 0 2.46094 3.71288 2.46094 8.29297C2.46094 9.82467 2.73349 11.4067 3.51562 12.5469L10 22L16.4844 12.5469C17.1948 11.5112 17.5391 9.68035 17.5391 8.29297C17.5391 3.71288 14.1637 0 10 0ZM10 4.80309C11.7519 4.80309 13.1726 6.36585 13.1726 8.29295C13.1726 10.2201 11.7519 11.7828 10 11.7828C8.24807 11.7828 6.8274 10.2201 6.8274 8.29297C6.8274 6.36585 8.24807 4.80309 10 4.80309Z"
+                                fill="white" />
+                        </g>
+                    </svg> &nbsp; NIT Jalandhar, G.T. Road, Amritsar Bye-Pass, Jalandhar (Punjab), India
+                </a>
+            </div>
+            <div class="footer__container__contact__phone">
+                <a href="tel:8651484067" class="footer__container__contact__link">
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="clarity:phone-handset-solid">
+                            <path id="Vector"
+                                d="M7.60988 12.6134C8.65362 13.9075 9.91652 14.9067 11.3099 15.5406L13.1949 13.7073C13.2508 13.6603 13.317 13.6351 13.3849 13.6351C13.4527 13.6351 13.519 13.6603 13.5749 13.7073L17.0749 16.4634C17.2078 16.5611 17.3202 16.6951 17.4034 16.855C17.4866 17.0149 17.5383 17.1963 17.5543 17.3847C17.5703 17.5732 17.5502 17.7637 17.4956 17.941C17.4411 18.1184 17.3535 18.2778 17.2399 18.4068L15.5999 20.3868C15.365 20.6704 15.0763 20.8785 14.7596 20.9926C14.4429 21.1067 14.1081 21.1232 13.7849 21.0406C10.561 20.2268 7.58944 18.3209 5.20988 15.5406C2.88312 12.7327 1.27301 9.15994 0.574875 5.25564C0.505908 4.86675 0.520303 4.46269 0.616663 4.0826C0.713024 3.70251 0.888083 3.35929 1.12488 3.0862L2.82488 1.08175C2.93007 0.949622 3.05837 0.848292 3.20015 0.785349C3.34193 0.722406 3.49352 0.699482 3.64358 0.718292C3.79364 0.737103 3.93827 0.797161 4.06664 0.893969C4.19502 0.990778 4.30381 1.12183 4.38488 1.27731L6.71488 5.50009C6.75506 5.56639 6.77676 5.64673 6.77676 5.72925C6.77676 5.81177 6.75506 5.89211 6.71488 5.95842L5.17987 8.21342C5.71267 9.88233 6.54274 11.3853 7.60988 12.6134V12.6134Z"
+                                fill="white" />
+                        </g>
+                    </svg> &nbsp; +91-8651484067
+                </a>
+            </div>
+            <div class="footer__container__contact__mail">
+                <a href="mailto:chowklabours@gmail.com" class="footer__container__contact__link">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="mail">
+                            <path id="Vector"
+                                d="M4.09092 17.9998V8.72962L1.93408 6.09945L0 4.63989V16.3639C0 17.2691 0.550195 17.9998 1.2273 17.9998H4.09092V17.9998Z"
+                                fill="white" />
+                            <path id="Vector_2"
+                                d="M13.9092 18H16.7728C17.4519 18 18.0001 17.2665 18.0001 16.364V4.64014L15.8094 6.31188L13.9092 8.72976V18V18Z"
+                                fill="white" />
+                            <path id="Vector_3"
+                                d="M4.09085 8.72975L3.79736 5.10761L4.09085 1.64087L8.99992 6.54861L13.909 1.64087L14.2374 4.92044L13.909 8.72975L8.99992 13.6375L4.09085 8.72975Z"
+                                fill="white" />
+                            <path id="Vector_4"
+                                d="M13.9092 1.641V8.72987L18.0001 4.64015V2.45892C18.0001 0.435899 16.2676 -0.71737 15.0547 0.495882L13.9092 1.641Z"
+                                fill="white" />
+                            <path id="Vector_5"
+                                d="M0 4.63971L1.88149 6.52074L4.09092 8.72943V1.64055L2.94539 0.495437C1.73039 -0.717909 0 0.435454 0 2.45838V4.63961V4.63971Z"
+                                fill="white" />
+                        </g>
+                    </svg> &nbsp; chowklabours@gmail.com
+                </a>
+            </div>
+        </div>
+        </div>
+        <div class="hr__line"></div>
+        <div class="copyright">
+            <span class="u-red-text"> The_Optimizers</span>, &#169; 2022 All Rights Reserved
+        </div>
+        </footer>
+</body>
+
+</html>

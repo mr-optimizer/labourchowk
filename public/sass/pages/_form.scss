@@ -1,0 +1,230 @@
+#failure {
+  background-color: rgb(255, 51, 0);
+  padding: 4px 0px 4px 0px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.hidden {
+  display: none;
+}
+
+.formgroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("https://source.unsplash.com/random/900×700/?worker");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 7rem;
+  &::selection {
+    background: #42fa61;
+    color: #fff;
+  }
+}
+.wrapper {
+  overflow: hidden;
+  width: 60vw;
+  // max-width: 390px;
+  background: rgb(247, 245, 243);
+  margin: auto;
+  opacity: 0.9;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  .title-text {
+    display: flex;
+    width: 200%;
+  }
+  .title {
+    width: 50%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .slide-controls {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    .slide {
+      height: 100%;
+      width: 100%;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+      line-height: 48px;
+      cursor: pointer;
+      z-index: 1;
+      transition: all 0.6s ease;
+    }
+    label.signup {
+      color: #000;
+    }
+    .slider-tab {
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      left: 0;
+      z-index: 0;
+      border-radius: 5px;
+      background: -webkit-linear-gradient(left, #45b24b, #42fa42);
+      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  }
+  .form-container {
+    width: 100%;
+    overflow: hidden;
+    .form-inner {
+      display: flex;
+      width: 200%;
+      p {
+        margin: 10px 0px;
+        text-align: center;
+      }
+      form {
+        width: 50%;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+    }
+  }
+}
+
+#signup:checked ~ .slider-tab {
+  left: 50%;
+}
+#signup:checked ~ label.signup {
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+#signup:checked ~ label.login {
+  color: #000;
+}
+#login:checked ~ label.signup {
+  color: #000;
+}
+#login:checked ~ label.login {
+  cursor: default;
+  user-select: none;
+}
+
+.form-inner form .field {
+  height: 50px;
+  width: 97%;
+  margin-top: 3rem;
+
+  input,
+  select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    border-bottom-width: 2px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-color: #83fcb1;
+      /* box-shadow: inset 0 0 3px #fb6aae; */
+    }
+    ::placeholder {
+      color: #999;
+      transition: all 0.3s ease;
+    }
+    :focus::placeholder {
+      color: #b3b3b3;
+    }
+  }
+  textarea {
+    resize: none;
+  }
+
+  input[type='file']{
+    background-color: white;
+  }
+}
+#UploadImage {
+  font-size: 17px;
+  
+  color: black;
+  
+  margin-bottom: 6rem;
+}
+
+.Ack {
+  padding-left: 0.75rem;
+  margin: 1rem 0rem;
+  font-size: 1.8rem;
+}
+
+.form-inner form .pass-link {
+  margin-top: 1.2rem;
+}
+.form-inner form .signup-link {
+  text-align: center;
+  margin-top: 30px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+  text-decoration: none;
+  padding-left: 0.45rem;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+  text-decoration: underline;
+}
+form .btn {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .btn-layer {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(
+    right,
+    #45b276,
+    #42fa79,
+    #45b27f,
+    #57fa42
+  );
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+form .btn:hover .btn-layer {
+  left: 0;
+}
+form .btn input[type="submit"] {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  display: none;
+}
