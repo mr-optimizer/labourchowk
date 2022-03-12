@@ -20,14 +20,13 @@
   background-size: cover;
   padding: 7rem;
   &::selection {
-    background: #42fa61;
+    background: var(--color-primary-dark);
     color: #fff;
   }
 }
 .wrapper {
   overflow: hidden;
-  width: 60vw;
-  // max-width: 390px;
+  width: 50vw;
   background: rgb(247, 245, 243);
   margin: auto;
   opacity: 0.9;
@@ -77,7 +76,7 @@
       left: 0;
       z-index: 0;
       border-radius: 5px;
-      background: -webkit-linear-gradient(left, #45b24b, #42fa42);
+      background: -webkit-linear-gradient(left, var(--color-primary-dark), var(--color-primary-light));
       transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
   }
@@ -133,7 +132,7 @@
     transition: all 0.3s ease;
 
     &:focus {
-      border-color: #83fcb1;
+      border-color: var(--color-primary-light);
       /* box-shadow: inset 0 0 3px #fb6aae; */
     }
     ::placeholder {
@@ -205,10 +204,10 @@ form .btn .btn-layer {
   left: -100%;
   background: -webkit-linear-gradient(
     right,
-    #45b276,
-    #42fa79,
-    #45b27f,
-    #57fa42
+    var(--color-primary-dark),
+    var(--color-primary-light),
+    var(--color-primary-dark),
+    var(--color-primary-light)
   );
   border-radius: 5px;
   transition: all 0.4s ease;

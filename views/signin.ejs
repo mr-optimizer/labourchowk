@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SignUp</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="javascript/form.js" defer></script>
+    <script src="https://kit.fontawesome.com/836abe09ea.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <%- include('header'); -%>
+
+        <div class="formgroup">
+            <div class="wrapper">
+                <div class="title-text">
+                    <div class="title login">Login as</div>
+                    <div class="title signup">Login as</div>
+                </div>
+                <div class="form-container">
+                    <div class="slide-controls">
+                        <input type="radio" name="slide" id="login" checked />
+                        <input type="radio" name="slide" id="signup" />
+                        <label for="login" class="slide login">Worker</label>
+                        <label for="signup" class="slide signup">Customer</label>
+                        <div class="slider-tab"></div>
+                    </div>
+
+                    <div class="form-inner">
+                        <form action="/loginworker" method="POST" class="login">
+                            <div class="field">
+                                <input type="text" placeholder="Contact Number" name="contactNo" />
+                            </div>
+                            <div class="field">
+                                <input type="password" placeholder="Password" name="password">
+                            </div>
+                            <div class="pass-link">
+                                <a href="#">Forgot password?</a>
+                            </div>
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
+                                <input type="submit" value="Login" />
+                            </div>
+                            <!-- <div class="signup-link">
+                Not a member? <a href="">Signup now</a>
+              </div> -->
+                        </form>
+
+                        <form action="/loginUser" method="POST" class="signup">
+
+                            <div class="field">
+                                <input type="text" name="contactNo" placeholder="Contact Number" />
+                            </div>
+                            <div class="field">
+                                <input type="password" name="password" placeholder="Password" required />
+                            </div>
+                            <div class="pass-link">
+                                <a href="#">Forgot password?</a>
+                            </div>
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
+                                <input type="submit" value="Login" />
+                            </div>
+                            <!-- <div class="signup-link">
+                Not a member? <a href="">Signup now</a>
+              </div> -->
+                        </form>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <%- include('footer'); -%>
+
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SignUp</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="javascript/form.js" defer></script>
+    <script src="https://kit.fontawesome.com/836abe09ea.js" crossorigin="anonymous"></script>
+
+    <script src="javascript/validation.js" defer></script>
+    <script src="javascript/function.js" defer></script>
+</head>
+
+<body>
+
+    <%- include('header'); -%>
+
+        <div id="failure" class="hidden">
+            <p>Oops!! there was some error!! 😶</p>
+        </div>
+
+        <div class="formgroup">
+            <div class="wrapper">
+                <div class="title-text">
+                    <div class="title login">Signup As</div>
+                    <div class="title signup">SignUp As</div>
+                </div>
+                <div class="form-container">
+                    <div class="slide-controls">
+                        <input type="radio" name="slide" id="login" checked />
+                        <input type="radio" name="slide" id="signup" />
+                        <label for="login" class="slide login">Worker</label>
+                        <label for="signup" class="slide signup">Customer</label>
+                        <div class="slider-tab"></div>
+                    </div>
+
+                    <div class="form-inner">
+                        <form action="/registerworker" method="POST" class="login login1">
+                            <div class="field">
+                                <input type="text" name="firstName" label="First_Name" placeholder="First Name" id="WorkerFirstName" required />
+                            </div>
+                            <p class="WarningMessage">
+                                The field cannot be blank
+                            </p>
+                            <div class="field">
+                                <input name="lastName" type="text" label="Last Name" placeholder="Last Name" id="WorkerLastName" required />
+                            </div>
+                            <p class="WarningMessage">
+                                The field cannot be blank
+                            </p>
+
+                            <div class="field">
+                                <input name="WorkerDOB" type="date" label="DOB" placeholder="Date of birth" id="WorkerDOB" />
+                            </div>
+                            <p class="WarningMessage">
+                                The age should be above 18
+                            </p>
+
+                            <div class="field">
+                                <input type="text" name="addressOne" label="Address1" id="WorkerAddress1" placeholder="Address1" />
+                            </div>
+                            <p class="WarningMessage">
+                                The field cannot be blank
+                            </p>
+                            <div class="field">
+                                <input type="text" name="addressTwo" label="Address2" id="WorkerAddress2" placeholder="Address2" />
+                            </div>
+                            <p class="WarningMessage">
+                                The field cannot be blank
+                            </p>
+                            <div class="field">
+                                <input type="number" name="pinCode" label="Pincode" id="WorkerPincode" placeholder="Pincode" />
+                            </div>
+                            <p class="WarningMessage">
+                                The field cannot be blank
+                            </p>
+
+                            <div class="field">
+                                <input type="number" name="wage" label="Pincode" id="WorkerPincode" placeholder="wage" />
+                            </div>
+                            <p class="WarningMessage">
+                                The field cannot be blank
+                            </p>
+
+                            <div class="field">
+                                <input type="text" name="city" label="City" id="WokerCity" placeholder="City" />
+                            </div>
+                            <p class="WarningMessage">
+                                The field cannot be blank
+                            </p>
+                            <div class="field">
+                                <select name="state" id="WorkerState" class="form-control">
+                  <option value="">Select Yout State....</option>
+                  <option class="field" value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chandigarh">Chandigarh</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                  <option value="Daman and Diu">Daman and Diu</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Lakshadweep">Lakshadweep</option>
+                  <option value="Puducherry">Puducherry</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Manipur">Manipur</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Mizoram">Mizoram</option>
+                  <option value="Nagaland">Nagaland</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West Bengal">West Bengal</option>
+                </select>
+                            </div>
+                            <p class="WarningMessage">
+                                Select your state
+                            </p>
+
+                            <div class="field">
+                                <select name="workType" id="WorkerType">
+                  <option value="">Select Your Work Type...</option>
+                  <option value="Manson">Manson</option>
+                  <option value="carpentery">Carpentery</option>
+                  <option value="Labour">Labour</option>
+                  <option value="Painter">Painter</option>
+                  <option value="Plumber">Plumber</option>
+                  <option value="Tiles Mistri">Tiles Mistri</option>
+                  <option value="BlackSmith">BlackSmith</option>
+                </select>
+                            </div>
+                            <p class="WarningMessage">
+                                This caanot be blank
+                            </p>
+
+                            <div class="field">
+                                <input id="WorkersAadhar" name="adharNo" type="text" label="Aadhar" placeholder="Aadhar number" />
+                            </div>
+                            <p class="WarningMessage">
+                                This is not a valid aadhar number
+                            </p>
+
+                            <div class="field">
+                                <input name="contactNo" id="ContactNumber" type="tel" placeholder="Contact Number" required />
+                            </div>
+                            <p class="WarningMessage">
+                                This is not a valid Mobile number
+                            </p>
+
+
+                            <div class="field" id="UploadImage">
+                                <label for="image">Upload your pic</label>
+
+                                <input type="file" name="avatar" placeholder="upload your image" accept="image/*" onchange="readURL(this);" required />
+                            </div>
+
+                            <div class="field">
+                                <input name="password" type="password" label="Password" placeholder="Password" id="WorkerPassword" required />
+                            </div>
+                            <p class="WarningMessage">
+                                Should contain 1 uppercase,1 lowercase,1number,1 symbol
+                            </p>
+
+                            <div class="field">
+                                <input type="password" placeholder="Confirm Password" id="WorkerConfirmPassword" required />
+                            </div>
+                            <p class="WarningMessage">
+                                This password is wrong
+                            </p>
+
+                            <div class="Ack">
+                                <input type="checkbox" name="Ack" class="Ack" required />
+                                <label for="Ack">I agree to the<a href="/TANDC" target="blank">
+                    terms and condition</a>
+                </label>
+                            </div>
+
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
+                                <input type="submit" value="Submit" />
+                            </div>
+                        </form>
+
+
+
+
+                        <form action="/registeruser" method="POST" class="signup login2">
+                            <div class="field">
+                                <input type="text" name="firstName" label="First_Name" placeholder="First Name" id="CustomerFirstName" required />
+                            </div>
+                            <p class="WarningMessage">
+                                The field cannot be blank
+                            </p>
+
+                            <div class="field">
+                                <input name="lastName" type="text" label="Last_Name" placeholder="Last Name" id="CustomerLastName" required />
+                            </div>
+                            <p class="WarningMessage">
+                                The field cannot be blank
+                            </p>
+
+                            <div class="field">
+                                <input type="text" id="CustomerAddress1" name="addressOne" label="CustomerAddress1" placeholder="Address1" required />
+                            </div>
+                            <p class="WarningMessage">
+                                The field cannot be blank
+                            </p>
+
+
+                            <div class="field">
+                                <input type="text" id="CustomerAddress2" name="addressTwo" label="CustomerAddress2" placeholder="Address2" required />
+                            </div>
+
+                            <p class="WarningMessage">
+                                The field cannot be blank
+                            </p>
+
+                            <div class="field">
+                                <input id="CustomerPincode" type="text" name="pinCode" label="CustomerPincode" placeholder="Pincode" required />
+                            </div>
+                            <p class="WarningMessage">
+                                Please enter a valid pincode
+                            </p>
+                            <div class="field">
+                                <input type="text" id="CustomerCity" name="city" label="CustomerCity" placeholder="City" required />
+                            </div>
+                            <p class="WarningMessage">
+                                Please enter a valid City Name
+                            </p>
+                            <div class="field">
+                                <select name="state" id="CustomerState" class="form-control">
+                  <option value=" ">Select your state</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chandigarh">Chandigarh</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                  <option value="Daman and Diu">Daman and Diu</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Lakshadweep">Lakshadweep</option>
+                  <option value="Puducherry">Puducherry</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Manipur">Manipur</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Mizoram">Mizoram</option>
+                  <option value="Nagaland">Nagaland</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West Bengal">West Bengal</option>
+                </select>
+                            </div>
+                            <p class="WarningMessage">
+                                Please select a state
+                            </p>
+
+                            <div class="field">
+                                <input id="CustomerContactNo" name="contactNo" label="Company_Contact_Number" type="tel" placeholder="Contact Number" required />
+                            </div>
+                            <p class="WarningMessage">
+                                Please enter a contact number
+                            </p>
+
+                            <div class="field">
+                                <input id="CustomerEmail" name="email" label="CustomerEmail" type="email" placeholder="Email Id" />
+                            </div>
+                            <p class="WarningMessage">
+                                Please enter a valid mail id
+                            </p>
+
+                            <div class="field" id="UploadImage">
+                                <label for="image">Upload your pic</label>
+
+                                <input type="file" name="avatar" placeholder="upload your image" accept="image/*" required>
+                            </div>
+                            <div class="field">
+                                <input id="CustomerPassword" name="password" type="password" label="CustomerPassword" placeholder="Password" required />
+                            </div>
+                            <p class="WarningMessage">
+                                Should contain 1 uppercase,1 lowercase,1number,1 symbol
+                            </p>
+
+                            <div class="field">
+                                <input id="CustomerConfirmPassword" name="CustomerConfirmPassword" type="password" placeholder="Confirm Password" required />
+
+                            </div>
+                            <p class="WarningMessage">
+                                Password doesnot match
+                            </p>
+
+                            <div class="Ack">
+                                <input type="checkbox" name="Ack" class="Ack" required />
+                                <label for="Ack">I agree to the<a href="TANDC.html" target="blank">
+                    terms and condition</a>
+                </label>
+                            </div>
+
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
+                                <input type="submit" id="" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('footer'); -%>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/836abe09ea.js" crossorigin="anonymous"></script>
+    <title>Users</title>
+</head>
+
+<body>
+
+    <%- include('header'); -%>
+
+        <form action="/getWorker" method="POST">
+            <section class="profile_section ">
+
+                <div class="selecting_container">
+                    <div class="filters">
+                        <p class="heading-tertiary--2 u-margin-bottom-medium">Filters</p>
+                        <div class="work_type_container">
+                            <p class="heading-tertiary u-margin-bottom-small">Work Type</p>
+                            <div class="r_btn">
+                                <input type="radio" id="carpentery" name="work_type" value="carpentery">
+                                <label class="paragraph" for="carpentery">Carpentery</label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="raj_mistri" name="work_type" value="Manson">
+                                <label class="paragraph" for="raj_mistri">Raj Mistri</label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="roof_molding" name="work_type" value="Painter">
+                                <label class="paragraph" for="roof_molding">Painter</label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="painting" name="work_type" value="painting">
+                                <label class="paragraph" for="Plumber">Plumber</label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="plumbing" name="work_type" value="Tiles Mistri">
+                                <label class="paragraph" for="plumbing">Tiles Mistri</label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="electrition" name="work_type" value="BlackSmith">
+                                <label class="paragraph" for="electrition">BlackSmith</label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="any" name="work_type" value="">
+                                <label class="paragraph" for="any">Any</label>
+                            </div>
+                        </div>
+
+                        <div class="price_container">
+                            <p class="heading-tertiary u-margin-bottom-small">Wage</p>
+                            <div class="r_btn">
+                                <input type="radio" id="200" name="price" value="200">
+                                <label class="paragraph" for="200">
+                                    <=200< /label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="300" name="price" value="300">
+                                <label class="paragraph" for="300">
+                                    <=300< /label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="400" name="price" value="400">
+                                <label class="paragraph" for="400">
+                                    <=400< /label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="500" name="price" value="500">
+                                <label class="paragraph" for="500">
+                                    <=500< /label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="600" name="price" value="600">
+                                <label class="paragraph" for="600">
+                                    <=600< /label>
+                            </div>
+                        </div>
+
+                        <div class="rating_container">
+                            <p class="heading-tertiary u-margin-bottom-small">Ratings</p>
+                            <div class="r_btn">
+                                <input type="radio" id="5" name="star" value="5">
+                                <label for="5">
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                </label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="4" name="star" value="4">
+                                <label for="4">
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                </label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="3" name="star" value="3">
+                                <label for="3">
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                </label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="2" name="star" value="2">
+                                <label for="2">
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                    <i class="fa-solid fa-star star_c_r"></i>
+                                </label>
+                            </div>
+                            <div class="r_btn">
+                                <input type="radio" id="1" name="star" value="1">
+                                <label for="1"><i class="fa-solid fa-star star_c_r"></i></label>
+                            </div>
+                        </div>
+
+                        <div class="search_container">
+                            <p class="heading-tertiary u-margin-bottom-small">PIN CODE</p>
+                            <div class="s_box">
+                                <input type="number" placeholder="Enter your pin" id="pin_code" value="pinCode"
+                                    name="pin_code" minlength="6" maxlength="6">
+                                <button type="submit" class="s_box_btn">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- profile_container -->
+                <div class="section_right">
+                    <div class="profile_container">
+                        <div class="profile_container_heading">Workers near you</div>
+                        <div class="profile_container_box">
+                            <div class="user_img_container">
+                                <img src="https://media.istockphoto.com/photos/young-man-at-carpentry-cutting-wood-and-using-digital-tablet-picture-id1311311996?s=612x612"
+                                    class="user_img" />
+                            </div>
+                            <div class="user_detail">
+                                <div class="user_detail_name">
+                                    <p class="heading-tertiary">
+                                        <%= firstName %>
+                                            <%= lastName %>
+                                    </p>
+                                </div>
+                                <div class="user_detail_email">
+                                    <p class="email">
+                                        <%= email %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- this is the markup. you can change the details (your own name, your own avatar etc.) but don’t change the basic structure! -->
+                    <div class="lab_cards_container">
+                        <%if(workers.length==0){%>
+                            <h1 style="font-size: 4rem;">Sorry!! No Workers Found</h1>
+                            <%}%>
+                                <% for(let i=0;i<workers.length;i++){ %>
+                                    <div class="profile-card">
+                                        <header>
+                                            <a href="http://ali.shahab.pk">
+                                                <img class="head_profile_img"
+                                                    src="https://image-uniservice.linternaute.com/image/450/7/8548547626/836977.jpg">
+                                            </a>
+                                            <h1 class="heading_name_labours">
+                                                <%= workers[i].firstName %>
+                                                    <%= workers[i].lastName %>
+                                            </h1>
+                                            <p>
+                                            <ul class="remove_css">
+                                                <li class="cvc remove_css">
+                                                    <%= workers[i].workType %>
+                                                </li>
+                                            </ul>
+                                            </p>
+                                        </header>
+                                        <div class="profile-bio">
+                                            <p>
+                                            <ul class="cv remove_css">
+                                                <li class="cv remove_css">
+                                                    <span class="heading_wage">Wage : </span> ₹ <%= workers[i].wage %>
+                                                </li>
+                                                <li class="cv remove_css">
+                                                    <span class="heading_wage">Pin : </span>
+                                                    <%= workers[i].pinCode %>
+                                                </li>
+                                                <li class="cv remove_css">
+                                                    <button class="btn_numbers"><span class="heading_wage">Ph. Number :
+                                                        </span>
+                                                        <span class="cv">+91 <%= workers[i].contactNo %></span>
+                                                    </button>
+                                                </li>
+                                                <li class="cv remove_css u-margin-bottom-medium">
+                                                    <span class="heading_wage">
+                                                        <i class="fa-solid fa-star star_c_lab"></i>
+                                                        <i class="fa-solid fa-star star_c_lab"></i>
+                                                        <i class="fa-solid fa-star star_c_lab"></i>
+                                                        <i class="fa-solid fa-star star_c_lab"></i>
+                                                        <i class="fa-solid fa-star star_c_lab"></i>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <%}%>
+                    </div>
+                </div>
+            </section>
+        </form>
+        <%- include('footer'); -%>
+
+</body>
+
+</html>

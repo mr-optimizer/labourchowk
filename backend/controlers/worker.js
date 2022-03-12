@@ -4,19 +4,22 @@ const catchAyncErrors = require("../middlewares/catchAsyncErrors");
 const sendToken = require("../utils/jwtToken");
 const crypto = require("crypto");
 const cloudinary = require("cloudinary");
+const { use } = require("express/lib/application");
 
+// const avatar = require("../../public/javascript/function");
 
 // Register new Worker
 exports.registerWorker = catchAyncErrors(async (req, res, next) => {
   // #TODO Avatar
-//   if(req.body.avatar === undefined){
-//       return next(new ErrorHandler("Please upload a profile picture", 500));
-//   }
-//   const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
-//     floder: "users",
-//     width: 150,
-//     crop: "scale",
-//   });
+  // console.log(avatar);
+  // if(req.body.avatar === undefined){
+  //     return next(new ErrorHandler("Please upload a profile picture", 500));
+  // }
+  // const result = await cloudinary.v2.uploader.upload(avatar, {
+  //   floder: "worker",
+  //   width: 150,
+  //   crop: "scale",
+  // });
   const {
     firstName,
     lastName,
@@ -26,17 +29,15 @@ exports.registerWorker = catchAyncErrors(async (req, res, next) => {
     pinCode,
     city,
     state,
+    wage,
     workType,
     adharNo,
     contactNo,
     password,
-    // avatar: {
-    //     public_id: result.public_id,
-    //     url: result.secure_url,
-    //   },
+
   } = req.body;
   
-  const worker = await Worker.create({
+  const user = await Worker.create({
     firstName,
     lastName,
     dateOfBirth,
@@ -45,13 +46,32 @@ exports.registerWorker = catchAyncErrors(async (req, res, next) => {
     pinCode,
     city,
     state,
+    wage,
     workType,
     adharNo,
     contactNo,
     password,
+    // avatar: {
+    //   public_id: result.public_id,
+    //   url: result.secure_url,
+    // },
   });
 //   for sending web-token 
-  sendToken(worker, 200, res);
+  // sendToken(worker, 200, res);
+  res.render("labourprofile", {
+    firstName : user.firstName,
+    lastName : user.lastName,
+    addressOne : user.addressOne,
+    addressTwo : user.addressTwo,
+    pinCode : user.pinCode,
+    wage : user.wage,
+    city : user.city,
+    state : user.state,
+    workType : user.workType,
+    adharNo : user.adharNo,
+    contactNo : user.contactNo,
+  });
+
 });
 
 // Login User
@@ -76,5 +96,18 @@ exports.loginWorker = catchAyncErrors (async (req, res, next) => {
   if (!isPasswordMattched) {
     return next(new ErrorHandler("Invalid Password", 401));
   }
-  sendToken(user, 200, res);
+  // sendToken(user, 200, res);
+  res.render("labourprofile", {
+    firstName : user.firstName,
+    lastName : user.lastName,
+    addressOne : user.addressOne,
+    addressTwo : user.addressTwo,
+    pinCode : user.pinCode,
+    city : user.city,
+    state : user.state,
+    wage : user.wage,
+    workType : user.workType,
+    adharNo : user.adharNo,
+    contactNo : user.contactNo,
+  });
 })

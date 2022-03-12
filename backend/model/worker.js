@@ -43,7 +43,7 @@ const workerSchema = new mongoose.Schema({
   },
   workType: {
     type: String,
-    required: [true, "required field"],
+    required: [true, "Please select your work type"],
   },
   adharNo: {
     type: String,
@@ -65,6 +65,10 @@ const workerSchema = new mongoose.Schema({
     min: 8,
     max: 16,
     select: false,
+  },
+  wage: {
+    type: Number,
+    required : [true, "Please enter your daily wage"]
   },
   avatar: {
     public_id: {

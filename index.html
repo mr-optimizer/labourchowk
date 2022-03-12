@@ -5,143 +5,184 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/836abe09ea.js" crossorigin="anonymous"></script>
     <title>Home</title>
-    <link rel="stylesheet" href="./public//css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <section class="section__upfold">
+        <div class="header">
+            <div class="header__brand">
+                <div class="header__brand__logo">
+                    <img src="img/logo.png" class="header__brand__logo--img" alt="brand_logo">
+                </div>
+                <div class="header__brand__name__header">labour
+                    <span class="header__brand__name__header--title">chowk</span>
+                </div>
+            </div>
+            <div class="header__navbar">
+                <div class="header__navbar__btn">
+                    <a class="header__navbar__btn--text" href="#">Home</a>
+                </div>
+                <div class="header__navbar__btn">
+                    <a class="header__navbar__btn--text" href="#features">About us</a>
+                </div>
+                <div class="header__navbar__btn">
+                    <a class="header__navbar__btn--text" href="#customers">Our Customers</a>
+                </div>
+                <div class="header__navbar__btn">
+                    <a class="header__navbar__btn--text" href="#footer">Contact Us</a>
+                </div>
+                <!-- <div class="header__navbar__btn">
+                    <a class="header__navbar__btn--text" href="#">Home</a>
+                </div> -->
+            </div>
+            <div class="header__search_action_home">
+                <!-- <p class="heading-tertiary u-margin-bottom-small">PIN CODE</p> -->
+                <input type="text" class="header__search_action_home--box" placeholder=" Enter text" id="xyz" name="xyz" minlength="3" maxlength="12">
+                <div class="header__search_action_home--iconq"><i class="fa fa-search header__search_action_home--icon" aria-hidden="true"></i></div>
+            </div>
+        </div>
 
-    <section class="home_container">
-        <div class="top_bar">
-            <div class="company_branding">
-                <img src="./public/img/logo.png" alt="" class="company_logo">
-                <div class="header__brand__name__footer">Labour 
-                  <span class="header__brand__name__footer--title">Chowk</span>
+        <div class="section__upfold__content">
+            <div class="section__upfold__text">
+                <h1 class="heading_primary_bold_ls">Labour Chowk</h1>
+                <div class="section__upfold__text--2">
+                    <h1 class="heading_primary_underline">Connecting customers with workers</h1>
+                    <p class="paragraph">Ending offline search by bringing the workers online 24x7</p>
                 </div>
             </div>
-            <div class="top_bar_left">
-                <img class="top_bar_left_logo" src="./public/img/home/phone.png" alt="">
-                <span class="top_bar_left_text"> +91 9142357822</span>
-            </div>
-            <div class="top_bar_left">
-                <img class="top_bar_left_logo" src="./public/img/home/address.png" alt="">
-                <span class="top_bar_left_text"> &nbsp;Punjab, India</span>
-            </div>
-        </div>
-        <nav class="nav_bar">
-            <div class="nav_bar_nav">
-                <div class="nav_bar_item">Home</div>
-                <div class="nav_bar_item">Servises</div>
-                <div class="nav_bar_item">Pages</div>
-                <div class="nav_bar_item">Portfolio</div>
-                <div class="nav_bar_item">Features</div>
-                <div class="nav_bar_item">About</div>
-            </div>
-            <span class="nav_bar_btn">Singup Now</>
-        </nav>
-        <div class="home">
-          <div class="home_right">
-            <p class="home_right_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, sint.
-            </p>
-            <div class="home_right_btn">Login</div>
-            <div class="home_right_btn">Sign-in</div>
-          </div>
-          <div class="home_background"></div>
-        </div>
-        <div class="reach">
-            <div class="reach_left">
-                <h1 class="heading-primary">Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
-                <p class="reach_left_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae dolor
-                    asperiores vel autem quam deleniti, corrupti nemo necessitatibus aliquid!</p>
-            </div>
-            <div class="reach_mid">
-                <div class="reach_mid_item">
-                    <img class="reach_mid_item_img" src="./public/img/home/tools.png" alt="">
-                    <div class="reach_mid_item_count">2K+ Workers</div>
+            <div class="section__upfold__btns">
+                <div class="section__upfold__btns__signin">
+                    <i class="fa fa-sign-in icon_signin" aria-hidden="true"></i>
+                    <a class="section__upfold__btns--text" href="/signin">Sign In</a>
                 </div>
-                <div class="reach_mid_item">
-                    <img class="reach_mid_item_img" src="./public/img/home/coustomer.png" alt="">
-                    <div class="reach_mid_item_count">3K+ Customers</div>
+                <div class="section__upfold__btns__signup">
+                    <i class="fa fa-sign-in icon_signup" aria-hidden="true"></i>
+                    <a class="section__upfold__btns--text" href="/signup">Sign Up</a>
                 </div>
-            </div>
-            <div class="reach_right">
-                <img class="reach_img" src="./public/img/home/worker.webp" alt="">
             </div>
         </div>
     </section>
 
-    <section class="section__testimonials" id="Feature">
-        <h1 class="testimonials_heading">Testimonials</h1>
+    <section class="section__features" id="features">
+        <div class="features__content u-margin-bottom-big">
+            <div class="features__content__image">
+                <img class="features__content__image--img" src="https://images.pexels.com/photos/327049/pexels-photo-327049.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </div>
+            <div class="features__content__text">
+                <div class="icons__container">
+                    <div class="features__content__text__icons">
+                        <img class="features__content__text__icon" src="img/home/worker.png" alt="">
+                        <p class="icon_text">Something</p>
+                    </div>
+                    <div class="features__content__text__icons">
+                        <img class="features__content__text__icon" src="img/home/tools.png" alt="">
+                        <p class="icon_text">Something</p>
+                    </div>
+                </div>
+                <div class="features__content__text__para u-margin-top-big ">
+                    <h1 class="heading-features u-margin-bottom-medium">Lorem ipsum dolor</h1>
+                    <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae veritatis porro labore error totam voluptate reprehenderit nisi beatae excepturi fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, modi?</p>
+                </div>
+            </div>
+        </div>
+        <div class="features__content ">
+            <div class="features__content__text">
+                <div class="icons__container">
+                    <div class="features__content__text__icons">
+                        <img class="features__content__text__icon" src="img/home/worker.png" alt="">
+                        <p class="icon_text">Something</p>
+                    </div>
+                    <div class="features__content__text__icons">
+                        <img class="features__content__text__icon" src="img/home/tools.png" alt="">
+                        <p class="icon_text">Something</p>
+                    </div>
+                </div>
+                <div class="features__content__text__para u-margin-top-big ">
+                    <h1 class="heading-features u-margin-bottom-medium">Lorem ipsum dolor</h1>
+                    <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae veritatis porro labore error totam voluptate reprehenderit nisi beatae excepturi fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, modi?</p>
+                </div>
+            </div>
+            <div class="features__content__image">
+                <img class="features__content__image--img" src="https://images.pexels.com/photos/327049/pexels-photo-327049.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section__testimonials" id="customers">
+        <h1 class="testimonials_heading">What our user say</h1>
         <div class="section__testimonials__container">
-          <div class="slider">
-            <input type="radio" name="testimonial" id="t-1" />
-            <input type="radio" name="testimonial" id="t-2" />
-            <input type="radio" name="testimonial" id="t-3" checked />
-            <input type="radio" name="testimonial" id="t-4" />
-            <input type="radio" name="testimonial" id="t-5" />
-            <div class="testimonials mb-8">
-              <label class="item" for="t-1">
+            <div class="slider">
+                <input type="radio" name="testimonial" id="t-1" />
+                <input type="radio" name="testimonial" id="t-2" />
+                <input type="radio" name="testimonial" id="t-3" checked />
+                <input type="radio" name="testimonial" id="t-4" />
+                <input type="radio" name="testimonial" id="t-5" />
+                <div class="testimonials mb-8">
+                    <label class="item" for="t-1">
                 <div class="mycard">
                   
                   <div>
                     <img
-                      src="image/customerimage/shubham.JPG"
+                      src="img/customers/Swastik.jpg"
                       alt="img"
                       class="cardimg"
                     />
                   </div>
                   <div>
                     <p class="carddescription">
-                     Working with Farm-Business was the best thing that happened to me 
+                     Working with Labour chawk was the best thing that happened to me 
                      and my family. 
+                    </p>
+                  </div>
+                  <p class="cardtitle">-Swastik</p>
+                </div>
+              </label>
+                    <label class="item" for="t-2">
+                <div class="mycard">
+                  
+                  <div>
+                    <img
+                      src="img/customers/shubham.jpg"
+                      alt="img"
+                      class="cardimg"
+                    />
+                  </div>
+                  <div>
+                    <p class="carddescription">
+                      A very innovative platform that bring worker to home without any hustle to customers.
                     </p>
                   </div>
                   <p class="cardtitle">-Shubham</p>
                 </div>
               </label>
-              <label class="item" for="t-2">
+                    <label class="item" for="t-3">
                 <div class="mycard">
                   
                   <div>
                     <img
-                      src="image/customerimage/Paras.JPG"
+                      src="img/customers/ankit.jpg"
                       alt="img"
                       class="cardimg"
                     />
                   </div>
                   <div>
                     <p class="carddescription">
-                      The ease of the digital solution, linking it to the rural world, 
-                      proves to be a fundamental pillar of sustainability for small farmers. 
-                    </p>
-                  </div>
-                  <p class="cardtitle">-Paras</p>
-                </div>
-              </label>
-              <label class="item" for="t-3">
-                <div class="mycard">
-                  
-                  <div>
-                    <img
-                      src="image/customerimage/Ankit.JPG"
-                      alt="img"
-                      class="cardimg"
-                    />
-                  </div>
-                  <div>
-                    <p class="carddescription">
-                      We, The Producers are made to feel as the Heart of Farm-Business.
+                     Not only it bridges the gap between worker and customers but also save the time a customer take to find specific workers for specific work
                     </p>
                   </div>
                   <p class="cardtitle">-Ankit</p>
                 </div>
               </label>
-              <label class="item" for="t-4">
+                    <label class="item" for="t-4">
                 <div class="mycard">
                   
                   <div>
                     <img
-                      src="image/customerimage/Harsh.JPG"
+                      src="img/customers/ravi.jpg"
                       alt="img"
                       class="cardimg"
                     />
@@ -152,15 +193,15 @@
                       से मैंने अपने सारे कर्ज चुका दिए हैं और अब मेरी अच्छी कमाई है। 
                     </p>
                   </div>
-                  <p class="cardtitle">-Harsh</p>
+                  <p class="cardtitle">-Ravi</p>
                 </div>
               </label>
-              <label class="item" for="t-5">
+                    <label class="item" for="t-5">
                 <div class="mycard">
                  
                   <div>
                     <img
-                      src="image/customerimage/Anshul.JPG"
+                      src="img/customers/rathore.jpg"
                       alt="img"
                       class="cardimg"
                     />
@@ -171,49 +212,41 @@
                       working for a social cause.
                     </p>
                   </div>
-                  <p class="cardtitle">-Anshul</p>
+                  <p class="cardtitle">-Lakshya</p>
                 </div>
               </label>
+                </div>
+                <div class="dots">
+                    <label for="t-1"></label>
+                    <label for="t-2"></label>
+                    <label for="t-3"></label>
+                    <label for="t-4"></label>
+                    <label for="t-5"></label>
+                </div>
             </div>
-            <div class="dots">
-              <label for="t-1"></label>
-              <label for="t-2"></label>
-              <label for="t-3"></label>
-              <label for="t-4"></label>
-              <label for="t-5"></label>
-            </div>
-          </div>
         </div>
-      </section>
-  
+    </section>
+
 
     <footer class="footer" id="footer">
         <div class="footer__container">
             <div class="footer__container__about">
-                <!-- <marquee behavior="" direction="right" scrollamount="20"> -->
-                    <div class="company">
-                        <div class="header__brand__name__footer">
-                            Labour
-                            <span class="header__brand__name__footer--title">Chowk</span>
-            </div>
-            <!-- <div class="company_logo">
-                            <svg class="company__logo" viewBox="0 0 85 60" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g id="fa-solid:tractor">
-                                    <path id="Vector"
-                                        d="M70.1261 39.375C63.6713 39.375 58.4384 43.9922 58.4384 49.6875C58.4384 55.3828 63.6713 60 70.1261 60C76.5809 60 81.8138 55.3828 81.8138 49.6875C81.8138 43.9922 76.5809 39.375 70.1261 39.375ZM70.1261 52.5C68.369 52.5 66.9385 51.2379 66.9385 49.6875C66.9385 48.1371 68.369 46.875 70.1261 46.875C71.8832 46.875 73.3136 48.1371 73.3136 49.6875C73.3136 51.2379 71.8832 52.5 70.1261 52.5ZM80.7513 18.75H72.2511V14.0391C72.2511 12.3844 72.8754 10.7859 73.9976 9.4875C74.5847 8.80781 74.4691 7.83985 73.8223 7.20352L70.9495 4.3711C70.065 3.49805 68.5164 3.56016 67.669 4.4625C65.1562 7.13672 63.751 10.5246 63.751 14.0391V18.75H50.1601L42.7105 3.41485C42.2211 2.40098 41.4045 1.53658 40.3623 0.929349C39.32 0.322122 38.0983 -0.00108389 36.8494 2.73095e-06H19.1253C15.6097 2.73095e-06 12.7502 2.52305 12.7502 5.625V22.7953C11.604 22.0066 9.96641 22.0383 8.91319 22.9676L4.78132 26.6133C3.64045 27.6199 3.64045 29.2523 4.78132 30.259L5.45337 30.852C4.79062 31.9371 4.26335 33.0574 3.87154 34.2176H2.92192C1.30822 34.2176 0 35.3719 0 36.7957V41.952C0 43.3758 1.30822 44.5301 2.92192 44.5301H3.87022C4.26335 45.6914 4.78929 46.8106 5.45204 47.8969L4.78 48.4898C3.63912 49.4965 3.63912 51.1289 4.78 52.1356L8.91186 55.7813C10.0527 56.7879 11.9028 56.7879 13.0437 55.7813L13.7158 55.1883C14.9456 55.7731 16.2153 56.2383 17.5302 56.584V57.4219C17.5302 58.8457 18.8384 60 20.4521 60H26.296C27.9097 60 29.2179 58.8457 29.2179 57.4219V56.5852C30.5327 56.2395 31.8025 55.7742 33.0323 55.1895L33.7044 55.7824C34.8452 56.7891 36.6953 56.7891 37.8362 55.7824L41.9681 52.1367C43.109 51.1301 43.109 49.4977 41.9681 48.491L41.296 47.8981C41.9588 46.8129 42.4861 45.6926 42.8779 44.5324H43.8288C45.4425 44.5324 46.7507 43.3781 46.7507 41.9543V41.2512H57.4476C60.3576 37.8539 64.9277 35.6262 70.1261 35.6262C72.6018 35.6262 74.9167 36.1664 77.0059 37.0559L83.7555 31.1004C84.5524 30.3973 85 29.4434 85 28.4484V22.5C85.0013 20.4293 83.0981 18.75 80.7513 18.75ZM23.3754 48.75C17.5076 48.75 12.7502 44.5523 12.7502 39.375C12.7502 34.1977 17.5076 30 23.3754 30C29.2431 30 34.0005 34.1977 34.0005 39.375C34.0005 44.5523 29.2431 48.75 23.3754 48.75ZM26.2973 18.75H21.2503V7.5H35.4469L40.9122 18.75H26.2973Z"
-                                        fill="white" />
-                                </g>
-                            </svg>
-                        </div> -->
-            </div>
-            <!-- </marquee> -->
-            <div class="footer__container__about--text">
-                Farm Business is a Non-Profit Organization that provides Farmers exposure and opportunities to sell their products at justified prices. We open them doors to thousands of market verified buyers.
-            </div>
-            <div class="social_media">
-                <a href="https://www.facebook.com/profile.php?id=100079149154544" class="social_media_link">
-                    <svg width="36" height="36" viewBox="0 0 36 36" class="icon icon-facebook" xmlns="http://www.w3.org/2000/svg">
+
+                <div class="company">
+                    <div class="header__brand__name__footer">
+                        Labour
+                        <span class="header__brand__name__footer--title">Chowk</span>
+                    </div>
+
+                </div>
+
+                <div class="footer__container__about--text">
+                    Labour Chawk is a Non-Profit Organization that provides Workers exposure and opportunities to get work at justified prices and get out of unnecessary comptetion in market. Also we aim to provide verified Workers to customer at convinent rate and save
+                    their precious time.
+                </div>
+                <div class="social_media">
+                    <a href="https://www.facebook.com/profile.php?id=100079149154544" class="social_media_link">
+                        <svg width="36" height="36" viewBox="0 0 36 36" class="icon icon-facebook" xmlns="http://www.w3.org/2000/svg">
                             <g id="fb">
                                 <g id="Group">
                                     <path id="Vector" fill-rule="evenodd" clip-rule="evenodd"
@@ -221,8 +254,8 @@
                                 </g>
                             </g>
                         </svg>
-                </a>
-                <a href="http://wa.me/9798447977" class="social_media_link"><svg width="36" height="36"
+                    </a>
+                    <a href="http://wa.me/9798447977" class="social_media_link"><svg width="36" height="36"
                             viewBox="0 0 36 36" fill="black" class="icon icon-whatsapp"
                             xmlns="http://www.w3.org/2000/svg">
                             <g id="whatsapp">
@@ -231,7 +264,7 @@
                             </g>
                         </svg>
                     </a>
-                <a href="https://www.instagram.com/labourschowk/" class="social_media_link"><svg width="36"
+                    <a href="https://www.instagram.com/labourschowk/" class="social_media_link"><svg width="36"
                             height="36" viewBox="0 0 36 36" class="icon icon-insta" xmlns="http://www.w3.org/2000/svg">
                             <g id="insta">
                                 <path id="Vector-insta"
@@ -239,7 +272,7 @@
                             </g>
                         </svg>
                     </a>
-                <a href="mailto:chowklabours@gmail.com" class="social_media_link"><svg width="36" height="36"
+                    <a href="mailto:chowklabours@gmail.com" class="social_media_link"><svg width="36" height="36"
                             viewBox="0 0 18 18" class="icon icon-mail" xmlns="http://www.w3.org/2000/svg">
                             <g id="mail">
                                 <path id="Vector"
@@ -255,7 +288,7 @@
                             </g>
                         </svg>
                     </a>
-                <a href="https://twitter.com/ChowkLabours" class="social_media_link"><svg width="36" height="36"
+                    <a href="https://twitter.com/ChowkLabours" class="social_media_link"><svg width="36" height="36"
                             viewBox="0 0 36 36" class="icon icon-twitter" xmlns="http://www.w3.org/2000/svg">
                             <g id="twitter">
                                 <path id="Vector"
@@ -263,25 +296,8 @@
                             </g>
                         </svg>
                     </a>
-                <!-- <a
-                href="https://github.com/ShubhamKumar5802"
-                class="social_media_link"
-                ><svg
-                  width="36"
-                  height="36"
-                  viewBox="0 0 36 36"
-                  class="icon icon-youtube"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="utube">
-                    <path
-                      id="Vector"
-                      d="M21.0056 17.6869L16.7944 15.7219C16.4269 15.5512 16.125 15.7425 16.125 16.1494V19.8506C16.125 20.2575 16.4269 20.4487 16.7944 20.2781L21.0037 18.3131C21.3731 18.1406 21.3731 17.8594 21.0056 17.6869ZM18 0C8.05875 0 0 8.05875 0 18C0 27.9412 8.05875 36 18 36C27.9412 36 36 27.9412 36 18C36 8.05875 27.9412 0 18 0ZM18 25.3125C8.78625 25.3125 8.625 24.4819 8.625 18C8.625 11.5181 8.78625 10.6875 18 10.6875C27.2137 10.6875 27.375 11.5181 27.375 18C27.375 24.4819 27.2137 25.3125 18 25.3125Z"
-                    />
-                  </g>
-                </svg>
-              </a> -->
-            </div>
+
+                </div>
             </div>
             <div class="footer__container__contact">
                 <div class="footer__container__contact__heading">
@@ -339,12 +355,14 @@
                     </a>
                 </div>
             </div>
-            </div>
-            <div class="hr__line"></div>
-            <div class="copyright">
-                <span class="u-red-text"> The_Optimizers</span>, &#169; 2022 All Rights Reserved
-            </div>
-            </footer>
+        </div>
+        <div class="hr__line"></div>
+        <div class="copyright">
+            <span class="u-red-text"> The_Optimizers</span>, &#169; 2022 All Rights Reserved
+        </div>
+    </footer>
 </body>
+
+</html>
 
 </html>

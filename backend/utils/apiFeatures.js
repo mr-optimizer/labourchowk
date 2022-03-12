@@ -7,25 +7,25 @@ class APIFeatures {
   search() {
     const keyword = this.queryStr.keyword
       ? {
-          name: {
+          firstName: {
             $regex: this.queryStr.keyword,
             $options: "i",
           },
         }
       : {};
-    // console.log({ ...keyword });
     this.query = this.query.find({ ...keyword });
     return this;
   }
 
   filter() {
     const queryCopy = { ...this.queryStr };
+
     //   Removing fields from the query
     const removeField = ["keyword", "limit", "page"];
     removeField.forEach((ele) => delete queryCopy[ele]);
-
     // Advance filter for price range or rating range
     let queryStr = JSON.stringify(queryCopy);
+
     queryStr = queryStr.replace(/\b(gt|gte|lt|lte)\b/g, (match) => `$${match}`); //converting gt to $gt or lte to $lte because mongoo need $
 
     this.query = this.query.find(JSON.parse(queryStr));
