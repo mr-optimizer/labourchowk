@@ -115,7 +115,7 @@ npm run start
 
 
 ---
-Video link/embed is 
+Video link/embed is https://www.loom.com/share/d1c64de329f84fd1b89209e7e06abd7c
 
 
 
