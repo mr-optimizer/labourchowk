@@ -1,7 +1,7 @@
   <h2>Track Used <ins> -Social Cause and Open Innovation</ins></h2>
   
 ## LabourChowk
-The repository is for <strong>HAckowasp</strong> dated from 11-14
+The repository is for <strong>Hackowasp</strong> dated from 11-14
 Working link - https://chowklabours.herokuapp.com/
  ### Team member
   <ul>
@@ -118,6 +118,6 @@ npm run start
 Video link/embed is https://www.loom.com/share/d1c64de329f84fd1b89209e7e06abd7c
 
 
-
+Devfolio link - https://devfolio.co/submissions/labour-chowk-56d2
 
 
