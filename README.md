@@ -60,6 +60,49 @@ npm run start
 ---
 ## Images
 
+<h3>HOME PAGE</h3>
+
+![image](https://github.com/18ankitjha/labourchowk/blob/main/home.jpeg)
+
+
+<h3>SIGN UP PAGES</h3>
+
+<h4>Worker</h4>
+
+![image](https://github.com/18ankitjha/labourchowk/blob/main/signupworker.jpeg)
+
+
+<h4>Customer</h4>
+
+![image](https://github.com/18ankitjha/labourchowk/blob/main/signupuser.jpeg)
+
+
+![image](https://github.com/18ankitjha/labourchowk/blob/main/signupuser.jpeg)
+
+<!-- ![image](https://github.com/18ankitjha/FarmBusiness/blob/main/Web%20capture_27-2-2022_232742_localhost.jpeg) -->
+
+
+<h3>LOGIN PAGES</h3>
+
+![image](https://github.com/18ankitjha/FarmBusiness/blob/main/Web%20capture_28-2-2022_01847_localhost.jpeg)
+
+![image](https://github.com/18ankitjha/FarmBusiness/blob/main/Web%20capture_28-2-2022_01847_localhost.jpeg)
+
+<h3>Dashboard</h3>
+
+<h4>Worker</h4>
+
+![image](https://github.com/18ankitjha/FarmBusiness/blob/main/Web%20capture_27-2-2022_23241_localhost.jpeg)
+
+<h4>Customer</h4>
+
+
+![image](https://github.com/18ankitjha/FarmBusiness/blob/main/Web%20capture_27-2-2022_232944_localhost.jpeg)
+
+![image](https://github.com/18ankitjha/FarmBusiness/blob/main/Web%20capture_27-2-2022_23315_localhost.jpeg)
+
+![image](https://github.com/18ankitjha/FarmBusiness/blob/main/Web%20capture_28-2-2022_01551_localhost.jpeg)
+
 
 ---
 Video link/embed is 
