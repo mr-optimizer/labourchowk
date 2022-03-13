@@ -5,10 +5,11 @@ const catchAyncErrors = require("../middlewares/catchAsyncErrors");
 // const sendToken = require("../utils/jwtToken");
 // const cloudinary = require("cloudinary");
 const ApiFeatures = require("../utils/apiFeatures");
-const accountSid = 'ACc50e46eb3cda0745f873a5257bccbcb3'; // Your Account SID from www.twilio.com/console
-const authToken = 'cf4328c4c243b7b7190b81e9398da83f'; // Your Auth Token from www.twilio.com/console
 
-const twilio = require('twilio');
+const accountSid = "ACc50e46eb3cda0745f873a5257bccbcb3"; // Your Account SID from www.twilio.com/console
+const authToken = "dcb015ac3554caf66d0bb6dc39fe2d49"; 
+
+const twilio = require("twilio");
 const client = new twilio(accountSid, authToken);
 
 var currUser;
@@ -58,15 +59,14 @@ exports.registerUser = catchAyncErrors(async (req, res, next) => {
   // sendToken(user, 200, res);
   client.messages
     .create({
-        body: 'Thank you for registering.For any assistance you can call +916203758936',
-        to: '+918700731873', // Text this number
-        from: '(747) 219-2077', // From a valid Twilio number
+      body: "Thank you for registering.For any assistance you can call +916203758936",
+      to: "+918700731873", // Text this number
+      from: "(747) 219-2077", // From a valid Twilio number
     })
     .then((message) => console.log(message));
 
-
   let queryUrl = {
-    pinCode : pinCode * 1,
+    pinCode: pinCode * 1,
   };
   const apiFeatures = new ApiFeatures(Worker.find(), queryUrl)
     .search() //all the products in Product collection is now stored in apifeaturs
@@ -118,7 +118,7 @@ exports.loginUser = catchAyncErrors(async (req, res, next) => {
   currUser = user;
 
   let queryUrl = {
-    pinCode : user.pinCode * 1,
+    pinCode: user.pinCode * 1,
   };
 
   const apiFeatures = new ApiFeatures(Worker.find(), queryUrl)
