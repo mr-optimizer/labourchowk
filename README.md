@@ -70,7 +70,7 @@ npm run start
 
 <h3>HOME PAGE</h3>
 
-![image](https://github.com/18ankitjha/labourchowk/blob/main/home.jpeg)
+![image](https://github.com/ShubhamKumar5802/labourchowk/blob/main/home.jpeg)
 
 
 <h3>SIGN UP PAGES</h3>
@@ -110,7 +110,7 @@ npm run start
 
 
 
-![image](https://github.com/18ankitjha/labourchowk/blob/main/dashboarduser.jpeg)
+![image](https://github.com/ShubhamKumar5802/labourchowk/blob/main/dashboarduser.jpeg)
 
 
 
