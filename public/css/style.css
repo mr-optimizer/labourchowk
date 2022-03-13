@@ -45,7 +45,7 @@ html {
       font-size: 30%; } }
   @media screen and (max-width: 31.25em) {
     html {
-      font-size: 23%; } }
+      font-size: 25%; } }
 
 .u-center-text {
   text-align: center !important; }
@@ -104,7 +104,7 @@ body {
     letter-spacing: 1.75rem; }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -197,14 +197,17 @@ body {
           margin-left: 1rem; } }
       .footer .footer__container__about--text {
         color: var(--color-white);
-        font-size: 1.7rem; }
+        font-size: 2rem; }
+        @media screen and (max-width: 31.25em) {
+          .footer .footer__container__about--text {
+            font-size: 3rem; } }
     .footer .footer__container__contact {
       width: 35%;
       display: flex;
       flex-direction: column;
+      font-size: 2rem;
       gap: 2rem;
-      color: var(--color-white);
-      font-size: 1.5rem; }
+      color: var(--color-white); }
       @media screen and (max-width: 37.5em) {
         .footer .footer__container__contact {
           flex-wrap: wrap;
@@ -248,12 +251,13 @@ body {
 
 .copyright {
   margin-top: -2rem;
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: var(--color-white);
   font-family: "lato";
   font-style: italic; }
   @media screen and (max-width: 37.5em) {
     .copyright {
+      font-size: 3rem;
       width: 110%; } }
 
 .section__upfold {
@@ -715,6 +719,9 @@ body {
     font-weight: 600;
     text-align: center;
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    @media screen and (max-width: 31.25em) {
+      .wrapper .title {
+        font-size: 5rem; } }
   .wrapper .slide-controls {
     position: relative;
     display: flex;
@@ -1006,18 +1013,15 @@ input[type="radio"] {
   display: flex;
   background-color: var(--color-grey-light-2); }
 
-.selecting_container {
-  width: 20vw;
-  background-color: rgba(53, 58, 56, 0.985);
-  padding: 2rem; }
-  @media screen and (max-width: 56.25em) {
-    .selecting_container {
-      width: 35vw;
-      padding: 0rem; } }
-
 .filters {
+  background-color: rgba(53, 58, 56, 0.985);
+  width: 15vw;
   padding: 2rem;
   color: var(--color-grey-light-1); }
+  @media screen and (max-width: 56.25em) {
+    .filters {
+      width: 40vw;
+      padding: 1rem; } }
 
 .work_type_container {
   margin: 2rem; }
@@ -1055,6 +1059,12 @@ input[type="radio"] {
   @media screen and (max-width: 56.25em) {
     .s_box_input {
       width: 25rem; } }
+
+.paragraph-1 {
+  font-size: 2rem; }
+  @media screen and (max-width: 31.25em) {
+    .paragraph-1 {
+      font-size: 3rem; } }
 
 .profile_container {
   width: 100vw;
@@ -1095,6 +1105,9 @@ input[type="radio"] {
   flex-wrap: wrap;
   padding: 8rem 12rem;
   gap: 16rem; }
+  @media screen and (max-width: 31.25em) {
+    .lab_cards_container {
+      padding: 8rem 6rem; } }
 
 img {
   -ms-interpolation-mode: bicubic;

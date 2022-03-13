@@ -3,20 +3,16 @@
   background-color: var(--color-grey-light-2);
 }
 
-.selecting_container {
-  width: 20vw;
-  background-color: rgba(53, 58, 56, 0.985);
-  padding: 2rem;
-  @media screen and (max-width: $bp-medium) {
-    width: 35vw;
-    padding: 0rem;
-  }
-}
 
 .filters {
+  background-color: rgba(53, 58, 56, 0.985);
+  width: 15vw;
   padding: 2rem;
-
   color: var(--color-grey-light-1);
+  @media screen and (max-width: $bp-medium) {
+    width: 40vw;
+    padding: 1rem;
+  }
 }
 
 .work_type_container {
@@ -64,11 +60,15 @@
   &_input {
       @media screen and (max-width: $bp-medium) {
         width: 25rem;
-        
     }
   }
 }
-
+.paragraph-1{
+  font-size: 2rem;
+  @media screen and (max-width: $bp-smallest) {
+    font-size: 3rem;
+}
+}
 //////////////////////////////////////////////////////////////////////////
 .profile_container {
   width: 100vw;
@@ -113,6 +113,9 @@
   display: flex;
   flex-wrap: wrap;
   padding: 8rem 12rem;
+  @media screen and (max-width: $bp-smallest) {
+    padding: 8rem 6rem;
+  }
   gap: 16rem;
 }
 
